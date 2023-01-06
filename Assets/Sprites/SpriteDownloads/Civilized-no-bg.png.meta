@@ -1,0 +1,6657 @@
+fileFormatVersion: 2
+guid: e4a81be6fd0ac244ab606ccaa68595d0
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 9
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Civilized-no-bg_0
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 370
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad13b835186b80346871303b61924d9c
+      internalID: 544271147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_1
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 370
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2deb7e45062b2f74484375d9fc5b24b9
+      internalID: -59899711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_2
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 370
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 469494a578f84a644b416b35d801b756
+      internalID: 1964388714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_3
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 370
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 458a4ef4227172b478b5c48c742d3e69
+      internalID: 221491282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_4
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 370
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba67be7e320cd0645980af90bfe7d05c
+      internalID: 1840680974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_5
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 370
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b79dda146010c5b48957e5458692e740
+      internalID: -1296186447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_6
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 370
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0498438fdeca63d479c7d07b6f68df2c
+      internalID: -148311376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_7
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 370
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0d3581ddd8fc4b40bc58d69fae8e156
+      internalID: 23420328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_8
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 370
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0690e598612b154dbf923a51c69b7d1
+      internalID: 560081150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_9
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 370
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a3f8ab1cbd3a7048b0f67c47820abe1
+      internalID: 308077547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_10
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 371
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20dccc1352300074bbaa46afba40ad85
+      internalID: -1209801021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_11
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 370
+        width: 19
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54497cf62b0e5ec41bcc6fd199363377
+      internalID: -480518793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_12
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 360
+        width: 30
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0abf3750a93daa741b43fa1a38156599
+      internalID: 1031274468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_13
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 370
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1764c89bae51da446bf3150f50901d1b
+      internalID: 154055100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_14
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 370
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f03449dd26e09c8448bf460a4a00f65b
+      internalID: 583122609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_15
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 360
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa4f8bb84386e73488a3f081db25cbe8
+      internalID: -648445533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_16
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 360
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82d3172210635fd40ae15504cd0d6c98
+      internalID: 1050396429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_17
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 360
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4b22c9aa4385a040bff4b79ee2a0825
+      internalID: -312869482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_18
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 360
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30e2997d10b6d894b92faa27503fa926
+      internalID: -1930304268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_19
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 360
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2de0f2c792c40043a14e69277bd77f6
+      internalID: 959624093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_20
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 360
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 751cca87e89a37347abbac84b344ea6d
+      internalID: -655737227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_21
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 360
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ac298337738e2047b3c28f2e775d6ea
+      internalID: -1222408392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_22
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 360
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 043dad4e7ccba214e8422824c67f738b
+      internalID: -1409917379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_23
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 360
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 940f5613c0cc60143ba4451d4c303643
+      internalID: -1790641894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_24
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 360
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae86e0510fa7dd14d996e2d83b492047
+      internalID: -834384328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_25
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 365
+        width: 8
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6d0b23aeb4f9c346ba5aa09e0efa375
+      internalID: -747991647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_26
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 360
+        width: 19
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1621680a37a03cc40852edc49126f90d
+      internalID: -1219561385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_27
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 360
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 814df7760fe4416479962f4d173f2e72
+      internalID: -1225239742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_28
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 360
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd2161d642c2a0f43a2e12848cc7cd6e
+      internalID: 861112282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_29
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 361
+        width: 8
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d166246d02d72934f841321699c70d6b
+      internalID: 473275931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_30
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 350
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 905a7b680edd81b46b1ab00a29da161e
+      internalID: 1129543657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_31
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 350
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c16b4becee0d61c40b797d8944d09d12
+      internalID: -1605260442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_32
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 350
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ebfd65ca55a3fe418adc5e77c12802d
+      internalID: -173866328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_33
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 350
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bde355ba7634414a88e3473f7069474
+      internalID: -1338678412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_34
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 350
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e05826ba6ad93d34098e82d31bec7991
+      internalID: -545036047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_35
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 350
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfd228b74a3554048996367a8879049c
+      internalID: -1526652141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_36
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 350
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96b05f0360088f740be24037be8d7728
+      internalID: 1351871408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_37
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 350
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 291cc20527ff5cc48b1c4423e8b8fefa
+      internalID: 240656654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_38
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 350
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85dd81e839abb024b81d352b44ed10b3
+      internalID: 1787973072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_39
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 350
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf4ca43eac324224ea0bb5d67d33dfc3
+      internalID: -1726898300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_40
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 351
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ccba72a96e2cd941a0fcc6e15f7c251
+      internalID: -275760381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_41
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 350
+        width: 19
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecbd8d69683fa414ea288a808d9c153d
+      internalID: -1600921122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_42
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 350
+        width: 30
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83fd9e8138c860d479e28c7d3b8b0477
+      internalID: 1197320795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_43
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 350
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 633f251e7f09a1e48ac7d702b5a185b3
+      internalID: -313025502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_44
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 350
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b34e980c5333fd4692d996c9a0898af
+      internalID: -1640104565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_45
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 340
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd9be29163ea12244adfa6fe33f1d01d
+      internalID: -1862531763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_46
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 261
+        width: 38
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91aae7e65aade1b488e7e5c4421c7e13
+      internalID: 489578604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_47
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 340
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9cd1531dde8eb44facbe7e27c203a73
+      internalID: -1728679742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_48
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 340
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d38aa8373c9512b4cb75d4a768784670
+      internalID: -1055188016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_49
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 261
+        width: 8
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0065de0f259647c45b0af70b22e87fe1
+      internalID: 1758123697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_50
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 340
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53f8d9e6ce88c6c4788416ce1ae2542a
+      internalID: 1224643975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_51
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 261
+        width: 18
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf61c82bc5a8ab0479025218c7f1cd65
+      internalID: 1421201836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_52
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 261
+        width: 8
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71e41a364ffa8934c85dc0ce4ce329e1
+      internalID: -604916969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_53
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 340
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fc9a5ee8b96bb1408bf948115d4106b
+      internalID: 77964700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_54
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 343
+        width: 8
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 684dcaaf1f3c6cc4db7b670d0ce003ab
+      internalID: -898355850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_55
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 345
+        width: 8
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3560e1d2b92e68249bbfff17bc69a781
+      internalID: -1313399926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_56
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 339
+        width: 19
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb8021774e6cde245b27556649afd53f
+      internalID: -99394867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_57
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 340
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e44e8d05ab8b0b478f2514fbca033cb
+      internalID: -1857098810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_58
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 340
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24862c902abb04d4f91891e36706db31
+      internalID: 1300904621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_59
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 330
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bf701f16552a2a42984aa979238a562
+      internalID: -446273798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_60
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 341
+        width: 8
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78eef94c7d86fe1489015219bf3f408e
+      internalID: -182117553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_61
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 320
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76b8faf3a8179c440a8579795c0eafff
+      internalID: -1961918724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_62
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 330
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6c2323c0e658104793007cf98ba5de5
+      internalID: -80644935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_63
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 320
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e84583eac7a5a49439523931fc99961e
+      internalID: 5509970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_64
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 306
+        width: 12
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 720952b38b4969c46b35af400e7325e1
+      internalID: -244628739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_65
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 328
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a03a763adb797d549b893dc3ce9d8164
+      internalID: 111187054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_66
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 322
+        width: 30
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af0313657814cf44591acaf50bf4fe2f
+      internalID: -689825564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_67
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 320
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7bd8265efe3b0942ba311e62079b233
+      internalID: 2055108337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_68
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 330
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6582a949865f8a34cb120e65e87f674b
+      internalID: -607505772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_69
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 320
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1378c7d131d31c945a0a65bc0f0d1764
+      internalID: 1686902119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_70
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 330
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ea53544a5a30aa4fa22b15cac5cedfa
+      internalID: -1221133325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_71
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 319
+        width: 14
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36d5bb75cc1c41d4cb0e271e7765e276
+      internalID: 1441190304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_72
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 310
+        width: 30
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1c1afef49857b4459af3658d8e9be55
+      internalID: -880749665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_73
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 320
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b867f6713671b4e41975c8ed5b34e610
+      internalID: 1998207676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_74
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 320
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c41c87f3f3968b418c0590e4bc92d53
+      internalID: 478056746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_75
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 310
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce4848f5e6464854db69cccc3c1aa717
+      internalID: -1789059160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_76
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 302
+        width: 5
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee4e9933834ed784fa6e90c142b015c1
+      internalID: -1877793023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_77
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 310
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4535b06cee97804d8bc5e34b0fceb82
+      internalID: 77889240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_78
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 302
+        width: 5
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05b68fbaf07effc438dc779dbb9baebc
+      internalID: 1620006379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_79
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 310
+        width: 4
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ff0cf5182212a74881d5ab2221e98d6
+      internalID: -646998426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_80
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 308
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0b3f008c4fc6d84e81f081703f206c6
+      internalID: -1042187082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_81
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 310
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bb9d7b7008251d4db5362fd92133d94
+      internalID: -991549066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_82
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 310
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb92da6bdda538a4fb0e24477664e3ec
+      internalID: -411905626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_83
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 290
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6939e4307bcdb73499635b7d84e4d478
+      internalID: 1966861524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_84
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 290
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40b2bcfb31eb0a94aa4134dedd2ad16f
+      internalID: -396347968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_85
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 290
+        width: 7
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9c390e607dc64647882562fd0e582b7
+      internalID: 712434964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_86
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 300
+        width: 14
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba7022319c0cd094298b118f81bd069a
+      internalID: -15333868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_87
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 284
+        width: 8
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf3282a02f5c569489a0fe9760e538b5
+      internalID: 1171183931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_88
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 291
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6258dee4e16ffe743a905abeff963474
+      internalID: 1203736072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_89
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 282
+        width: 30
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5790b015b08db64d804fbd0be2873ef
+      internalID: 1336503701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_90
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 290
+        width: 4
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 094d8b53f2f79dc46bb061800df51399
+      internalID: -1149897263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_91
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 290
+        width: 4
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5be1d653bfffa214ea76f00f88ec1b15
+      internalID: 1011954164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_92
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 270
+        width: 9
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a50bb8a1f87eb044b9568157220b524b
+      internalID: 503496920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_93
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 283
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f19feff401a728444961501ccd7c0e8b
+      internalID: -21378101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_94
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 270
+        width: 9
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b6b9b4df0fbb9944902ae303cf3a216
+      internalID: -1551592968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_95
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 280
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b3543d23603bbb43af76ace00f77653
+      internalID: 709548588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_96
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 280
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d25177834a5b284cb1efeadd599ab2e
+      internalID: 1542658159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_97
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 280
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 837034eb2b63c0f40ab400f9eab2a18b
+      internalID: 2048195444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_98
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 270
+        width: 30
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 843d812e49d69a84dab7c40a3a06cb3f
+      internalID: -958102514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_99
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 280
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d84da392233df0b41a52ed0dbc4f81af
+      internalID: 1468211501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_100
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 280
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5eb6a4d703cb21e4f9fe3d2d8e9561f7
+      internalID: -1233672654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_101
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 280
+        width: 4
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb96bd59061220949ba7f1236d55b184
+      internalID: 252839639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_102
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 280
+        width: 4
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54515bca69601b542824f4c4569f52b5
+      internalID: -1406290576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_103
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 270
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4de48f1749adbba48b508e4562322bae
+      internalID: 1124513454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_104
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 264
+        width: 8
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1132bdf8fec978548acf5390b8a2b742
+      internalID: -757796175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_105
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 271
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e68c7630c4e43054eb7c6bcee85da622
+      internalID: 494467634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_106
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 270
+        width: 4
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f8a48c5ab7b47d4194310c83606e790
+      internalID: 706765262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_107
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 270
+        width: 4
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b26eb2ca59eeb4a41b9620aaa229f3e0
+      internalID: 1364277197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_108
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 260
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 874cc15a6af53c14ab1ecb6fcd8352ea
+      internalID: 760315312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_109
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 250
+        width: 8
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cf227eb66164c64485687bc84f7efea
+      internalID: -155039968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_110
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 250
+        width: 30
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14fc34dd6a46f6441a6ca3b4778d6676
+      internalID: -212950399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_111
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 260
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28ee1cf5e5fa8f148b455da860b5a1d8
+      internalID: -1573429286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_112
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 260
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d69d0d7647057e4481616ec6ed9e6f5
+      internalID: -356448932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_113
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 263
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e5bdef1ddfed3d408c85582bd0dc32d
+      internalID: 486589872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_114
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 260
+        width: 4
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bd7fc1f43250224698e5888e4959fdf
+      internalID: -219399606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_115
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 260
+        width: 4
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79b3d68872763af468a6de9616cd1e5e
+      internalID: -175063501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_116
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 250
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3eae095b4e83324bbf55eb6b03a1669
+      internalID: -467159347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_117
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 241
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e72203f334395034991531b98a8234fc
+      internalID: 847851056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_118
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 244
+        width: 30
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90a20ab12c5b5d0459883fb4e6a07fe6
+      internalID: -1433947864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_119
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 250
+        width: 4
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d29d3e284d03cbb4e89f1f49d0c30b1f
+      internalID: 1213468550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_120
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 250
+        width: 4
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be7e9037d01e00b439b1f5e8e52faeb5
+      internalID: 285489803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_121
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 240
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c5195e1c72d53543be00a15c35db0a0
+      internalID: -2146587337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_122
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 241
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad26a9fbca13e87469b0e95a03b7ac9a
+      internalID: -644229824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_123
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 241
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21c6bb9e73a06524eadb8ce053d8a58c
+      internalID: 1056333982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_124
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 241
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 834f8c4ad8614ae42adbcdf6caa43604
+      internalID: 594020091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_125
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 230
+        width: 30
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75f7a6d2f639f8b47857327edc55454a
+      internalID: -189285414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_126
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 240
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6669036fec78f142b49f72fe34598b5
+      internalID: -820067544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_127
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 240
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa2d83eb1b8deed4286bdcc81640c086
+      internalID: 42235497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_128
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 240
+        width: 4
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6772b1e3b7f412479ce4daaa84ba66c
+      internalID: -889723221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_129
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 240
+        width: 4
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9419e891036fc9f4ba8305e007b2c6fb
+      internalID: 352351250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_130
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 230
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58c1d11520f53df4e8f4283c45c33698
+      internalID: -1328512639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_131
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 230
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 447904643a8decd4195e81e9a0f098c2
+      internalID: 20828344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_132
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 230
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8aae475f4be581d4eb031b06877a09b6
+      internalID: 556069490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_133
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 230
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 051eea9f6be60be4aacc150cc9ef49be
+      internalID: -650903192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_134
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 228
+        width: 23
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8b78d2c6abf1a649bb96bbf5c6d4551
+      internalID: 1137749497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_135
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 228
+        width: 7
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01014108ab23b9a45ac3bed671206b81
+      internalID: 2077439116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_136
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 230
+        width: 4
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48e87584a90e6b14ca55f7dbd55e792b
+      internalID: -277749009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_137
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 230
+        width: 4
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f3c78cab72f61340b99e8cf1d6a62cc
+      internalID: 1844599736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_138
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 220
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 243a483698ec92846852174d2991bc91
+      internalID: 1394874607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_139
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 220
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6801031d85e504c40bb2a3f8b242122f
+      internalID: 1777133949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_140
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 220
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3eeb46ca51898d40b4984fe2005de38
+      internalID: -1093681132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_141
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 220
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d0af71fe9ce33d438523a972c401e12
+      internalID: 1402600046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_142
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 220
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42f36811c2e85494ba652674ee397b55
+      internalID: 867089145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_143
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 221
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 316509403d8b2864fbabfc578c5fd4a2
+      internalID: -1377711449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_144
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 221
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1240391ca51d8764d8908174d7786910
+      internalID: 1793391411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_145
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 220
+        width: 20
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 346ba4bae4be89047a7993149198ae54
+      internalID: -964589037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_146
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 210
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2354057ff2dd0ab47a4d0c5d74d2cb97
+      internalID: 1889536969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_147
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 210
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c35792c47b44cd44855866c3aa63a00
+      internalID: 1368406443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_148
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 210
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65022556a576ab94581c77122af2a3ac
+      internalID: -1279553313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_149
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 210
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cf7c783456ee0b49b34bcd83d6fb465
+      internalID: -155320415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_150
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 200
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 970c52da22fe1c24aab509f1cafe3904
+      internalID: 1769784337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_151
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 200
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcd6fbe14fce4ff459700fa6327a68f3
+      internalID: -63767713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_152
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 200
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f78a2460917a5f44688172c99c42da18
+      internalID: 1352584413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_153
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 200
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0161e54f38fb92343bd21d0e3d582536
+      internalID: 338459623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_154
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 205
+        width: 28
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f48254ea572b654a9f88726e03370f3
+      internalID: 1900629529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_155
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 190
+        width: 30
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9902bcd5be51733408f0b265597e4d21
+      internalID: 1821515979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_156
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 180
+        width: 8
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11baf06618aba48419a1f4cee2686fd6
+      internalID: 1616471351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_157
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 205
+        width: 28
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b443292c7ac1b454cb477da9619cb1b3
+      internalID: 952672242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_158
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 190
+        width: 30
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c671d623fa598449a075d291183a0a0
+      internalID: 606602456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_159
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 180
+        width: 8
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47f861c339bcdcf439001daed7008871
+      internalID: -1651293627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_160
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 190
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a490f7641cdec304185f64316f3e8016
+      internalID: -1559825896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_161
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 190
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 584fa6e923f46814f996baf7d0242a88
+      internalID: -863768027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_162
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 190
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b46f404bf9b16644fbed24ea7206b719
+      internalID: 753343940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_163
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 151
+        width: 19
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eedc01dc7e873ab49b3f067896e959d9
+      internalID: -1993692067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_164
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 190
+        width: 9
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6550382f18f3a43439700cac74f0816b
+      internalID: 1206093575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_165
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 192
+        width: 25
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f052cb3a78b0eda42bdbdc22a37d3a8a
+      internalID: 1930247348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_166
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 190
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d00563a65e9967a4ca3d5fb434a618c4
+      internalID: -1419958157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_167
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 190
+        width: 9
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08fa5f6a5cef89d4c96d51e9b2734b54
+      internalID: -286276526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_168
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 192
+        width: 25
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30350a545bd589440ab9da067a7ee034
+      internalID: 2102557541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_169
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 190
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8059c41a70c7b5c409e2d22c74c4176b
+      internalID: 924921040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_170
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 181
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e1594e82c5b4f142912eb970cc4013c
+      internalID: 606423368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_171
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 181
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 273b503db94d4c246ac434afbdce1d33
+      internalID: 2103369636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_172
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 181
+        width: 18
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab0b59b32d6f76c41be2319756184889
+      internalID: -2104407624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_173
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 160
+        width: 30
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75fbdbe5c93992749a625943b2e9582d
+      internalID: 309763729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_174
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 183
+        width: 5
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de3ccf381b3e72d478b74cb44aedac75
+      internalID: -1691123209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_175
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 182
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94735a28433a85840aa0410e89aac10e
+      internalID: -1983618735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_176
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 181
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cff72a21c2e86946938d4eced0beef1
+      internalID: -278747904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_177
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 181
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edfa3cce4590d674e8dc0802bd03d8f3
+      internalID: -1734650929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_178
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 181
+        width: 18
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04e7b9237bd0262469897f2dff9c745e
+      internalID: 1434233734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_179
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 160
+        width: 30
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77645921f6536db47914d1886c302230
+      internalID: -1940772255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_180
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 183
+        width: 5
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8d457082fadc5c42bf3417bcd83d39f
+      internalID: -200124109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_181
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 182
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c08a45da5d671814981d314c692542f7
+      internalID: 1186004250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_182
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 151
+        width: 39
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82ef125ce2d062449aeb9506fc3bb42e
+      internalID: -1275389740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_183
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 161
+        width: 8
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecafbcaeedbef8444aa9171a7e6325ab
+      internalID: 2101515995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_184
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 175
+        width: 28
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d0f7e6a28b341647ad565f19692f87d
+      internalID: 1353461029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_185
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 150
+        width: 8
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2577f76278ffc7e409da6c32fef36d2c
+      internalID: 493444970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_186
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 175
+        width: 28
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50fe1e6e352abee4e8ba32894e5f7096
+      internalID: 458210160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_187
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 150
+        width: 8
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcddda4a152a3504aaef4238c836256e
+      internalID: -155720400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_188
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 160
+        width: 9
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 044fde7983773ae42841d8c22fc59822
+      internalID: -986003424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_189
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 162
+        width: 25
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 026995c4e3ef0c94a87ba930808763bf
+      internalID: -82271724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_190
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 160
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2fde37f8900ae7458efead2f14fb24c
+      internalID: 1646428199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_191
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 160
+        width: 9
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae8d43df240db624a933243980b09e53
+      internalID: -1832511878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_192
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 162
+        width: 25
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b85149dacb63c8b4ab78282896000bb1
+      internalID: -1670089184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_193
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 160
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62b0de953612b1248bc0b96e77be2aad
+      internalID: -364274902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_194
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 150
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bc897b9389300c46a355ad6c7c498ec
+      internalID: 184180682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_195
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 150
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f2a5202b18e8eb44889f950fd0b704f
+      internalID: 650583079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_196
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 151
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 756567c22f6dea9409f9fb48ce8d8718
+      internalID: -1826177475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_197
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 151
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3bec08714d650e4583de762dbabd7aa
+      internalID: -1965270885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_198
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 151
+        width: 18
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0bcfa54b34483145b529dcc59bb5fb9
+      internalID: -1230223879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_199
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 151
+        width: 5
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26279667b2a508547b13bd38a0111b18
+      internalID: -1224458072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_200
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 150
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1725431b486a54147b948f2f12778f93
+      internalID: 870088715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_201
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 151
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51bb819a03e05ce41a4d3a65286c35e0
+      internalID: 530672158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_202
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 151
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0807905c65e36ec4db73899b7ac1e034
+      internalID: 445354272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_203
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 151
+        width: 18
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 911a9f5549d84f84dba4e992d4a19591
+      internalID: 1235827949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_204
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 151
+        width: 5
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 854a66dc6473a164a8bfd71c80ad7280
+      internalID: 18576564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_205
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 150
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2cf5f390e77dc248857bcbc31fa7b1b
+      internalID: -1913940435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_206
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 120
+        width: 10
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71a656f35ae4eb146bfbecfda53c6d99
+      internalID: -1316037542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_207
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 120
+        width: 7
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c3b3fbbefc25e642a47240722ea7f33
+      internalID: -212472248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_208
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 133
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 797ad0f43c21fc842babdb1b6faf9b66
+      internalID: -40820796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_209
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 130
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11e09bd942106d44f9fee5672b57bdff
+      internalID: 625004864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_210
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 130
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48732153860c3714584435d027eb831b
+      internalID: -256703385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_211
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 130
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 485205a20ba51fc4db2d7dbcf8173df2
+      internalID: 1604045562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_212
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 130
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adfada16b4e4d2b4ab7fce3c1056856f
+      internalID: -33936590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_213
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 130
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c848f78361121648b626bf1b0e0b8e5
+      internalID: -1138590926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_214
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 51
+        width: 8
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29805c6a073d1a04eb7abca941f25c69
+      internalID: 1876721896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_215
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 133
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0420c25fee5e9fb41a239db5bf9087b9
+      internalID: -1967207824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_216
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 120
+        width: 10
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c59961e36c478ac4b8f253d1a311211d
+      internalID: -2104014737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_217
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 120
+        width: 7
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f97cc0fc0dce164e87ef81e20612465
+      internalID: -1683042861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_218
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 133
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb60612a73611a64f9479f45cb123e98
+      internalID: 1536237030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_219
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 131
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c34bf1c3d9fa7945822a29b13953fa0
+      internalID: 1686835486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_220
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 131
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9212d0ace383234db65827df0458437
+      internalID: -861069901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_221
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 131
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2474b37e218217a4aa5d13af11ee4edc
+      internalID: 251678219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_222
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 131
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62bd9623739317044afac55abd6cf8c3
+      internalID: 776372470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_223
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 131
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e34e5f46b01d7484daebd1ccb27757ab
+      internalID: -1729780673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_224
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 130
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 659dfb7903c06dd4cb5dc6da700643fa
+      internalID: 1202547237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_225
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 130
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa90f2b1534492a45ac0643d8bcaff46
+      internalID: 443973262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_226
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 91
+        width: 67
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe7c1c2c58104d041a9779b3e6a80b9f
+      internalID: 1908496365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_227
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 121
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14decf79e4deb534a8b6ba6018268c1d
+      internalID: -1635758392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_228
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 121
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce515f2c92246b24caaab4a9e998b883
+      internalID: -1403822649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_229
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 121
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbf7dba49d43ad048b940ef15c3da874
+      internalID: -1753733667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_230
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 121
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d3b90b515ca6b64ab56f2744888ad66
+      internalID: 748434678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_231
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 120
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3f0073b318ec314b8a57cd7e916d0cd
+      internalID: -361688853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_232
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 120
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6413b56aabe49654383bf1947ca4ef2e
+      internalID: 856759996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_233
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 110
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e44cf28d39e4f244c95e97eaf7e122cb
+      internalID: -1529877530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_234
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 110
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f05e62f3e657004cae3e9019f32cad6
+      internalID: -89534298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_235
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 100
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: deba24b6d4fedb84bbd86cc24b7136fc
+      internalID: 1985441847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_236
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 100
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 429ba451acafac34bbd19ecfa1e2d4ec
+      internalID: -2054126205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_237
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 100
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14150b901588fad47a9923068c8ad895
+      internalID: -1596567673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_238
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 100
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32a34132932f2224b9a64e7d408fe9cd
+      internalID: -993705123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_239
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 100
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5c66476749d29d41b7f6a7406c6e8ba
+      internalID: -415335936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_240
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 100
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e31a5e1a262fd074ca8b7eaf74de8d7f
+      internalID: -817197121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_241
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 100
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0588bacce4766dc4aa341b4f23bc7a81
+      internalID: -663704242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_242
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 90
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2bbf1b42a1947844bf42e073c7b8792
+      internalID: 1110135654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_243
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 90
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4580e8af9e1ad994989a55c63c565fa4
+      internalID: 964957699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_244
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 90
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e824709a7683c840afc8d9abb563e5a
+      internalID: 1331349640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_245
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 90
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f9e13b0bb8f85e4e8f92fcab6ed2c22
+      internalID: 1708502312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_246
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 90
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13f25f017e1e4994abb2617d74d15316
+      internalID: -1111786865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_247
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 90
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4521cbe2e8a6eba42964ab5a9099247e
+      internalID: 684988057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_248
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 61
+        width: 18
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5113981ea3a982c40bd9456778595a44
+      internalID: 276794900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_249
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 92
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e181087c3610e24eb06681b7b69c0c6
+      internalID: -1123207309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_250
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 91
+        width: 19
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2669afc0ff6b816428154c0c39671e1c
+      internalID: 2019699828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_251
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 92
+        width: 8
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30b0c9ddc75e5b042a2efe4fb9248b2b
+      internalID: -2118371582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_252
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 91
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf6974d7ce6eaeb4a871737a00d1aefa
+      internalID: -796086238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_253
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 82
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e68ea47a70259846ab1017a62e766e3
+      internalID: 2013150933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_254
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 76
+        width: 30
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58662ea367a8603448761e6c26f3da46
+      internalID: 1288755809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_255
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 71
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c14a9f455a05949469d9e72f6fe27d48
+      internalID: -894648399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_256
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 51
+        width: 18
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5f2cbf7d0f4ea54799ad9fd06e16c62
+      internalID: -129016201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_257
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 51
+        width: 18
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec8f8b4990b75a5419ad34066990aa85
+      internalID: 1396318316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_258
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 51
+        width: 18
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca74fbc6c0d81b142ba6fb00a6629ed5
+      internalID: -1086876112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_259
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 71
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1d1b0b9e94cf2c41bb30d205b2dc8de
+      internalID: -490534857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_260
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 61
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84838db1031c78b43a632a3537f7dc49
+      internalID: -727542868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_261
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 61
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22995391a445da04daf6d3c1180671a5
+      internalID: 1737522680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_262
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 71
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a89553fb4f04b94ebc11e90a4e6eb7c
+      internalID: 1711482521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_263
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 75
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1214b73c8f1c67741b7ff70fe98a255c
+      internalID: -59141122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_264
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 75
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a011e7dafadd4ee43ba23daad276c63a
+      internalID: -1976180193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_265
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 60
+        width: 9
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c29917580a978994ca1067596117c5c9
+      internalID: 981168726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_266
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 70
+        width: 5
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09cf35ae32653bb45ac0140ee49112aa
+      internalID: -1354609916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_267
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 70
+        width: 7
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9e052dc4faaf7b4ebde0ffe680bf6ed
+      internalID: 1951346477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_268
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 50
+        width: 22
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 428634694ae749047b09b9f5bfa5f192
+      internalID: 65533472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_269
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 70
+        width: 7
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2346545ac9250f41921765cc29432bf
+      internalID: -2026344151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_270
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 70
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8b4be963127449458b932806ac978e7
+      internalID: 1563381677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_271
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 61
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c07d29f616f72d49ae39dc2c6cd359b
+      internalID: -1156231249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_272
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 65
+        width: 8
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f530e75fc4746924686c24514ae7f4c8
+      internalID: -116812619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_273
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 61
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6be67f37964fc1942a0eaf467de4fc7b
+      internalID: 1596624354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_274
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 61
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0007d90f85d17b4b9384802447f34c3
+      internalID: -1681252446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_275
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 61
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d7ef9622a6ee404e9103182e9946a5f
+      internalID: 1255160834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_276
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 65
+        width: 8
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffef150f1ba470d4fb513786c1aa74e1
+      internalID: -1203443523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_277
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 61
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78bfaf816f84f1942875f304b7985696
+      internalID: 547551412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_278
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 61
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac624de12c91ff946b96287779ace0d8
+      internalID: 1499815465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_279
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 62
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a9fab9c9a2c19f43b5aa5707469c866
+      internalID: -1986357453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_280
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 51
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0284120705b4ea4ba0247b116c8d3b5
+      internalID: -1696124797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_281
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 55
+        width: 8
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7ceabed3c054b24896ef0d80a3f05f4
+      internalID: -1255427137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_282
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 51
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07da547311df7d34f8afb3084d9f14fe
+      internalID: 13338478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_283
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 51
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fb8eac4212614c44a9bf5f866842e6f
+      internalID: -1740227317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_284
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 51
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69efd4ca22459fa4c9be0ea896eae3da
+      internalID: 3485881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_285
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 56
+        width: 7
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5d04af3a585a194db07d7bd2417d0fb
+      internalID: -93761755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_286
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 50
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11ee83a5c87501d4c916e2a20acb667d
+      internalID: -320703827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_287
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 12
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0cc2650b0127d94ca8cab30fb581434
+      internalID: -219465756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_288
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 12
+        width: 7
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfbb6fa47e9672f4aab84e2aff3349e1
+      internalID: -1909122859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_289
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 30
+        width: 25
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6557cb771ea1e7408afd3a7468ab50c
+      internalID: 1336211783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_290
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 12
+        width: 7
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fce9cc9e9970f584c924e7c450580800
+      internalID: -604081677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_291
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 12
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0942577ad1a4134fabf5b99f95b8697
+      internalID: 12756605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_292
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 12
+        width: 7
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d49b579b8f74d584a93a3a86007ea5d1
+      internalID: 390151451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_293
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 30
+        width: 25
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aceeea662b7b3ed4eb4107630ab54b7f
+      internalID: -1329115242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_294
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 12
+        width: 7
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3678555593b3a3d41a1af1c116b2f1d2
+      internalID: 384620986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_295
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 12
+        width: 25
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29ad4d94321fc9f4585bc4a816ede7ea
+      internalID: 1730065809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_296
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 12
+        width: 25
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65d426c8224a5254cb181fb23ed13d15
+      internalID: 558302931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Civilized-no-bg_69: 1686902119
+      Civilized-no-bg_2: 1964388714
+      Civilized-no-bg_202: 445354272
+      Civilized-no-bg_280: -1696124797
+      Civilized-no-bg_294: 384620986
+      Civilized-no-bg_295: 1730065809
+      Civilized-no-bg_274: -1681252446
+      Civilized-no-bg_59: -446273798
+      Civilized-no-bg_227: -1635758392
+      Civilized-no-bg_76: -1877793023
+      Civilized-no-bg_192: -1670089184
+      Civilized-no-bg_87: 1171183931
+      Civilized-no-bg_251: -2118371582
+      Civilized-no-bg_68: -607505772
+      Civilized-no-bg_226: 1908496365
+      Civilized-no-bg_21: -1222408392
+      Civilized-no-bg_166: -1419958157
+      Civilized-no-bg_47: -1728679742
+      Civilized-no-bg_37: 240656654
+      Civilized-no-bg_190: 1646428199
+      Civilized-no-bg_125: -189285414
+      Civilized-no-bg_275: 1255160834
+      Civilized-no-bg_246: -1111786865
+      Civilized-no-bg_249: -1123207309
+      Civilized-no-bg_293: -1329115242
+      Civilized-no-bg_183: 2101515995
+      Civilized-no-bg_253: 2013150933
+      Civilized-no-bg_24: -834384328
+      Civilized-no-bg_162: 753343940
+      Civilized-no-bg_218: 1536237030
+      Civilized-no-bg_170: 606423368
+      Civilized-no-bg_56: -99394867
+      Civilized-no-bg_256: -129016201
+      Civilized-no-bg_0: 544271147
+      Civilized-no-bg_62: -80644935
+      Civilized-no-bg_135: 2077439116
+      Civilized-no-bg_257: 1396318316
+      Civilized-no-bg_72: -880749665
+      Civilized-no-bg_18: -1930304268
+      Civilized-no-bg_139: 1777133949
+      Civilized-no-bg_95: 709548588
+      Civilized-no-bg_279: -1986357453
+      Civilized-no-bg_220: -861069901
+      Civilized-no-bg_195: 650583079
+      Civilized-no-bg_6: -148311376
+      Civilized-no-bg_247: 684988057
+      Civilized-no-bg_168: 2102557541
+      Civilized-no-bg_30: 1129543657
+      Civilized-no-bg_50: 1224643975
+      Civilized-no-bg_181: 1186004250
+      Civilized-no-bg_132: 556069490
+      Civilized-no-bg_263: -59141122
+      Civilized-no-bg_216: -2104014737
+      Civilized-no-bg_5: -1296186447
+      Civilized-no-bg_145: -964589037
+      Civilized-no-bg_14: 583122609
+      Civilized-no-bg_57: -1857098810
+      Civilized-no-bg_100: -1233672654
+      Civilized-no-bg_121: -2146587337
+      Civilized-no-bg_113: 486589872
+      Civilized-no-bg_234: -89534298
+      Civilized-no-bg_67: 2055108337
+      Civilized-no-bg_264: -1976180193
+      Civilized-no-bg_254: 1288755809
+      Civilized-no-bg_240: -817197121
+      Civilized-no-bg_58: 1300904621
+      Civilized-no-bg_78: 1620006379
+      Civilized-no-bg_22: -1409917379
+      Civilized-no-bg_46: 489578604
+      Civilized-no-bg_214: 1876721896
+      Civilized-no-bg_136: -277749009
+      Civilized-no-bg_36: 1351871408
+      Civilized-no-bg_268: 65533472
+      Civilized-no-bg_75: -1789059160
+      Civilized-no-bg_180: -200124109
+      Civilized-no-bg_104: -757796175
+      Civilized-no-bg_111: -1573429286
+      Civilized-no-bg_120: 285489803
+      Civilized-no-bg_13: 154055100
+      Civilized-no-bg_250: 2019699828
+      Civilized-no-bg_12: 1031274468
+      Civilized-no-bg_116: -467159347
+      Civilized-no-bg_73: 1998207676
+      Civilized-no-bg_179: -1940772255
+      Civilized-no-bg_208: -40820796
+      Civilized-no-bg_194: 184180682
+      Civilized-no-bg_106: 706765262
+      Civilized-no-bg_235: 1985441847
+      Civilized-no-bg_287: -219465756
+      Civilized-no-bg_32: -173866328
+      Civilized-no-bg_142: 867089145
+      Civilized-no-bg_45: -1862531763
+      Civilized-no-bg_85: 712434964
+      Civilized-no-bg_146: 1889536969
+      Civilized-no-bg_143: -1377711449
+      Civilized-no-bg_83: 1966861524
+      Civilized-no-bg_186: 458210160
+      Civilized-no-bg_153: 338459623
+      Civilized-no-bg_114: -219399606
+      Civilized-no-bg_212: -33936590
+      Civilized-no-bg_261: 1737522680
+      Civilized-no-bg_215: -1967207824
+      Civilized-no-bg_197: -1965270885
+      Civilized-no-bg_71: 1441190304
+      Civilized-no-bg_98: -958102514
+      Civilized-no-bg_228: -1403822649
+      Civilized-no-bg_165: 1930247348
+      Civilized-no-bg_291: 12756605
+      Civilized-no-bg_243: 964957699
+      Civilized-no-bg_196: -1826177475
+      Civilized-no-bg_277: 547551412
+      Civilized-no-bg_290: -604081677
+      Civilized-no-bg_213: -1138590926
+      Civilized-no-bg_292: 390151451
+      Civilized-no-bg_286: -320703827
+      Civilized-no-bg_278: 1499815465
+      Civilized-no-bg_169: 924921040
+      Civilized-no-bg_191: -1832511878
+      Civilized-no-bg_122: -644229824
+      Civilized-no-bg_270: 1563381677
+      Civilized-no-bg_61: -1961918724
+      Civilized-no-bg_126: -820067544
+      Civilized-no-bg_42: 1197320795
+      Civilized-no-bg_133: -650903192
+      Civilized-no-bg_105: 494467634
+      Civilized-no-bg_182: -1275389740
+      Civilized-no-bg_203: 1235827949
+      Civilized-no-bg_224: 1202547237
+      Civilized-no-bg_211: 1604045562
+      Civilized-no-bg_210: -256703385
+      Civilized-no-bg_272: -116812619
+      Civilized-no-bg_31: -1605260442
+      Civilized-no-bg_129: 352351250
+      Civilized-no-bg_124: 594020091
+      Civilized-no-bg_207: -212472248
+      Civilized-no-bg_271: -1156231249
+      Civilized-no-bg_209: 625004864
+      Civilized-no-bg_255: -894648399
+      Civilized-no-bg_244: 1331349640
+      Civilized-no-bg_158: 606602456
+      Civilized-no-bg_281: -1255427137
+      Civilized-no-bg_248: 276794900
+      Civilized-no-bg_93: -21378101
+      Civilized-no-bg_154: 1900629529
+      Civilized-no-bg_217: -1683042861
+      Civilized-no-bg_102: -1406290576
+      Civilized-no-bg_141: 1402600046
+      Civilized-no-bg_101: 252839639
+      Civilized-no-bg_43: -313025502
+      Civilized-no-bg_178: 1434233734
+      Civilized-no-bg_176: -278747904
+      Civilized-no-bg_288: -1909122859
+      Civilized-no-bg_149: -155320415
+      Civilized-no-bg_44: -1640104565
+      Civilized-no-bg_185: 493444970
+      Civilized-no-bg_219: 1686835486
+      Civilized-no-bg_237: -1596567673
+      Civilized-no-bg_51: 1421201836
+      Civilized-no-bg_223: -1729780673
+      Civilized-no-bg_245: 1708502312
+      Civilized-no-bg_157: 952672242
+      Civilized-no-bg_150: 1769784337
+      Civilized-no-bg_276: -1203443523
+      Civilized-no-bg_206: -1316037542
+      Civilized-no-bg_118: -1433947864
+      Civilized-no-bg_140: -1093681132
+      Civilized-no-bg_175: -1983618735
+      Civilized-no-bg_27: -1225239742
+      Civilized-no-bg_174: -1691123209
+      Civilized-no-bg_156: 1616471351
+      Civilized-no-bg_84: -396347968
+      Civilized-no-bg_155: 1821515979
+      Civilized-no-bg_117: 847851056
+      Civilized-no-bg_171: 2103369636
+      Civilized-no-bg_15: -648445533
+      Civilized-no-bg_39: -1726898300
+      Civilized-no-bg_201: 530672158
+      Civilized-no-bg_52: -604916969
+      Civilized-no-bg_11: -480518793
+      Civilized-no-bg_147: 1368406443
+      Civilized-no-bg_77: 77889240
+      Civilized-no-bg_109: -155039968
+      Civilized-no-bg_282: 13338478
+      Civilized-no-bg_90: -1149897263
+      Civilized-no-bg_285: -93761755
+      Civilized-no-bg_115: -175063501
+      Civilized-no-bg_204: 18576564
+      Civilized-no-bg_35: -1526652141
+      Civilized-no-bg_131: 20828344
+      Civilized-no-bg_48: -1055188016
+      Civilized-no-bg_34: -545036047
+      Civilized-no-bg_10: -1209801021
+      Civilized-no-bg_225: 443973262
+      Civilized-no-bg_259: -490534857
+      Civilized-no-bg_238: -993705123
+      Civilized-no-bg_8: 560081150
+      Civilized-no-bg_38: 1787973072
+      Civilized-no-bg_260: -727542868
+      Civilized-no-bg_63: 5509970
+      Civilized-no-bg_81: -991549066
+      Civilized-no-bg_86: -15333868
+      Civilized-no-bg_108: 760315312
+      Civilized-no-bg_231: -361688853
+      Civilized-no-bg_239: -415335936
+      Civilized-no-bg_23: -1790641894
+      Civilized-no-bg_74: 478056746
+      Civilized-no-bg_65: 111187054
+      Civilized-no-bg_184: 1353461029
+      Civilized-no-bg_267: 1951346477
+      Civilized-no-bg_266: -1354609916
+      Civilized-no-bg_33: -1338678412
+      Civilized-no-bg_66: -689825564
+      Civilized-no-bg_222: 776372470
+      Civilized-no-bg_230: 748434678
+      Civilized-no-bg_3: 221491282
+      Civilized-no-bg_49: 1758123697
+      Civilized-no-bg_20: -655737227
+      Civilized-no-bg_1: -59899711
+      Civilized-no-bg_167: -286276526
+      Civilized-no-bg_161: -863768027
+      Civilized-no-bg_177: -1734650929
+      Civilized-no-bg_173: 309763729
+      Civilized-no-bg_232: 856759996
+      Civilized-no-bg_199: -1224458072
+      Civilized-no-bg_29: 473275931
+      Civilized-no-bg_188: -986003424
+      Civilized-no-bg_241: -663704242
+      Civilized-no-bg_92: 503496920
+      Civilized-no-bg_91: 1011954164
+      Civilized-no-bg_88: 1203736072
+      Civilized-no-bg_41: -1600921122
+      Civilized-no-bg_7: 23420328
+      Civilized-no-bg_273: 1596624354
+      Civilized-no-bg_152: 1352584413
+      Civilized-no-bg_193: -364274902
+      Civilized-no-bg_229: -1753733667
+      Civilized-no-bg_134: 1137749497
+      Civilized-no-bg_64: -244628739
+      Civilized-no-bg_172: -2104407624
+      Civilized-no-bg_258: -1086876112
+      Civilized-no-bg_89: 1336503701
+      Civilized-no-bg_79: -646998426
+      Civilized-no-bg_151: -63767713
+      Civilized-no-bg_200: 870088715
+      Civilized-no-bg_265: 981168726
+      Civilized-no-bg_54: -898355850
+      Civilized-no-bg_159: -1651293627
+      Civilized-no-bg_53: 77964700
+      Civilized-no-bg_205: -1913940435
+      Civilized-no-bg_233: -1529877530
+      Civilized-no-bg_97: 2048195444
+      Civilized-no-bg_262: 1711482521
+      Civilized-no-bg_163: -1993692067
+      Civilized-no-bg_99: 1468211501
+      Civilized-no-bg_19: 959624093
+      Civilized-no-bg_284: 3485881
+      Civilized-no-bg_189: -82271724
+      Civilized-no-bg_164: 1206093575
+      Civilized-no-bg_70: -1221133325
+      Civilized-no-bg_296: 558302931
+      Civilized-no-bg_4: 1840680974
+      Civilized-no-bg_128: -889723221
+      Civilized-no-bg_94: -1551592968
+      Civilized-no-bg_187: -155720400
+      Civilized-no-bg_9: 308077547
+      Civilized-no-bg_221: 251678219
+      Civilized-no-bg_28: 861112282
+      Civilized-no-bg_242: 1110135654
+      Civilized-no-bg_144: 1793391411
+      Civilized-no-bg_107: 1364277197
+      Civilized-no-bg_252: -796086238
+      Civilized-no-bg_130: -1328512639
+      Civilized-no-bg_269: -2026344151
+      Civilized-no-bg_289: 1336211783
+      Civilized-no-bg_119: 1213468550
+      Civilized-no-bg_82: -411905626
+      Civilized-no-bg_25: -747991647
+      Civilized-no-bg_138: 1394874607
+      Civilized-no-bg_198: -1230223879
+      Civilized-no-bg_26: -1219561385
+      Civilized-no-bg_123: 1056333982
+      Civilized-no-bg_55: -1313399926
+      Civilized-no-bg_160: -1559825896
+      Civilized-no-bg_127: 42235497
+      Civilized-no-bg_110: -212950399
+      Civilized-no-bg_80: -1042187082
+      Civilized-no-bg_40: -275760381
+      Civilized-no-bg_60: -182117553
+      Civilized-no-bg_148: -1279553313
+      Civilized-no-bg_236: -2054126205
+      Civilized-no-bg_17: -312869482
+      Civilized-no-bg_103: 1124513454
+      Civilized-no-bg_112: -356448932
+      Civilized-no-bg_96: 1542658159
+      Civilized-no-bg_283: -1740227317
+      Civilized-no-bg_16: 1050396429
+      Civilized-no-bg_137: 1844599736
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
