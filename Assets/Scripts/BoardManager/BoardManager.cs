@@ -1,26 +1,54 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using UnityEngine;
 using CC = ComponentCache;
 
 public class BoardManager : MonoBehaviour
 {
+    #region Properties
     public String levelName;
     [SerializeField] private Transform cameraTransform;
     
     private LevelGrid _levelGrid;
     private List<GameObject> _playerControlledObjects;
     
+    private List<GameObject> _objectsToAnimateMove;
+    private Dictionary<GameObject, float> _objectsToAnimateMoveTimer = new Dictionary<GameObject, float>();
+
+    private Dictionary<int, IEventGroup> _eventGroups = new Dictionary<int, IEventGroup>();
+    private List<RequestedEvent> _requestedEvents = new List<RequestedEvent>();
     public int CurrentTurn { get; private set; }
+    
+    #endregion
+
+    #region PrivateAccessors
+
+    public LevelGrid GetLevelGrid()
+    {
+        return _levelGrid;
+    }
+
+    public void AddObjectToAnimate(GameObject gameObjectToAnimate)
+    {
+        _objectsToAnimateMove.Add(gameObjectToAnimate);
+    }
+
+    #endregion
+    
+    
+    #region Startup functions
     void Start()
     {
         CurrentTurn = 0;
         _playerControlledObjects = new List<GameObject>();
+        _objectsToAnimateMove = new List<GameObject>();
+        _objectsToAnimateMoveTimer = new Dictionary<GameObject, float>();
         
         LoadLevel();
-        InvokeRepeating(nameof(HandleTurn), 1f, 1/Globals.TURNS_PER_SECOND);
+        InvokeRepeating(nameof(HandleTurn), Globals.TIME_BEFORE_STARTING_TURNS, 1/Globals.TURNS_PER_SECOND);
         // CancelInvoke to stop
     }
 
@@ -56,6 +84,8 @@ public class BoardManager : MonoBehaviour
         newGameObject.transform.position = new Vector3(x, y);
         ComponentCache.GetGP(newGameObject).BoardX = x;
         ComponentCache.GetGP(newGameObject).BoardY = y;
+        
+        ComponentCache.GetGP(newGameObject).eventGroupId = -1;
 
         return newGameObject;
     }
@@ -67,83 +97,196 @@ public class BoardManager : MonoBehaviour
 
         foreach (var stringItem in stringItemsInCell)
         {
+            String[] parts = stringItem.Split(':');
+            String itemStringName = parts[0].Trim();
+            int eventGroupId = -1;
+            
+            if (parts.Length > 1)
+            {
+                eventGroupId = Int16.Parse(parts[1]);
+            }
+
             GameObject newGameObject = null;
-            if (stringItem == "player1")
+            if (itemStringName == "player1")
             {
                 newGameObject = CreateAndSetupGameObject(x, y, "GridBoundPrefabs/pf_player1");
                 _playerControlledObjects.Add(newGameObject);
-            } else if (stringItem == "wall") { newGameObject = CreateAndSetupGameObject(x, y, "GridBoundPrefabs/pf_wall"); } 
-            else if (stringItem == "boulder") { newGameObject = CreateAndSetupGameObject(x, y, "GridBoundPrefabs/pf_boulder"); } 
-            else if (stringItem == "goal") { newGameObject = CreateAndSetupGameObject(x, y, "GridBoundPrefabs/pf_goal"); } 
+            } else if (itemStringName == "wall") { newGameObject = CreateAndSetupGameObject(x, y, "GridBoundPrefabs/pf_wall"); } 
+            else if (itemStringName == "boulder") { newGameObject = CreateAndSetupGameObject(x, y, "GridBoundPrefabs/pf_boulder"); } 
+            else if (itemStringName == "goal") { newGameObject = CreateAndSetupGameObject(x, y, "GridBoundPrefabs/pf_goal"); }
+            else if (itemStringName == "basicButton") { newGameObject = CreateAndSetupGameObject(x, y, "GridBoundPrefabs/pf_basicButton"); }
+            else if (itemStringName == "basicGate") { newGameObject = CreateAndSetupGameObject(x, y, "GridBoundPrefabs/pf_basicGate"); }
 
             if (newGameObject != null)
             {
                 gameObjectsInCell.Add(newGameObject);
+
+                AddObjectToEventGroup(newGameObject, eventGroupId);
             }
         }
 
         return gameObjectsInCell;
-
     }
 
-    private List<Actions> GetCurrentActionInputs()
+    private void AddObjectToEventGroup(GameObject gameObject, int eventGroupId)
     {
-        List<Actions> actions = new List<Actions>();
-        List<Actions> noActions = new List<Actions>();
-        noActions.Add(Actions.None);
+        if (eventGroupId != -1)
+        {
+            if (!_eventGroups.ContainsKey(eventGroupId))
+            {
+                var newGroup = new ActivationEventGroup(); // JANK this will be dynamic based on a different csv cell
+                newGroup.EventGroupId = eventGroupId;
+                _eventGroups.Add(eventGroupId, newGroup);
+            }
 
-        if (Input.GetKey("up"))
-        {
-            actions.Add(Actions.Up);
+            CC.GetGP(gameObject).eventGroupId = eventGroupId;
+            _eventGroups[eventGroupId].AddObjectToEventGroup(gameObject);
         }
-        if (Input.GetKey("down"))
-        {
-            actions.Add(Actions.Down);
-        }
-        if (Input.GetKey("left"))
-        {
-            actions.Add(Actions.Left);
-        }
-        if (Input.GetKey("right"))
-        {
-            actions.Add(Actions.Right);
-        }
-        
-        
-        return actions.Count == 1 ? actions : noActions;
+    }
+    
+    #endregion
+
+    #region Turn Handling functions
+
+    private void HandleTurn()
+    {
+        HandleActions();
+        HandleEvents();
+        CurrentTurn++;
     }
 
-    private int GetXChange(Actions action)
+    private void HandleEvents()
+    {
+        foreach (var requestedEvent in _requestedEvents)
+        {
+            var triggeredEvent = requestedEvent.triggeredEvent;
+            var triggeredObject = requestedEvent.triggeredObject;
+            var eventGroupId = CC.GetGP(triggeredObject).eventGroupId;
+
+            if (eventGroupId != -1)
+            {
+                _eventGroups[eventGroupId].TriggerEventGroup(triggeredEvent, this);
+            }
+        }
+        _requestedEvents.Clear();
+    }
+
+    private void AddTriggerEventsForTile(int x, int y, EventGroupTrigger trigger)
+    {
+        foreach (var o in _levelGrid.GetTile(x, y))
+        {
+            AddRequestedEvent(o, trigger);
+        }
+    }
+
+    #region Helper Functions
+
+    private void AddRequestedEvent(GameObject gameObject, EventGroupTrigger eventGroupTrigger)
+    {
+        // Fix consolidation of same events or something.
+        var requestedEvent = new RequestedEvent
+        {
+            triggeredObject = gameObject,
+            triggeredEvent = eventGroupTrigger
+        };
+
+        _requestedEvents.Add(requestedEvent);
+    }
+    private int GetXChange(InputAction inputAction)
     {
         int xChange = 0;
 
-        if (action == Actions.Left) { xChange -= 1; }
-        if (action == Actions.Right) { xChange += 1; }
+        if (inputAction == InputAction.Left) { xChange -= 1; }
+        if (inputAction == InputAction.Right) { xChange += 1; }
 
         return xChange;
     }
     
-    private int GetYChange(Actions action)
+    private int GetYChange(InputAction inputAction)
     {
         int yChange = 0;
-        if (action == Actions.Down) { yChange -= 1; }
-        if (action == Actions.Up) { yChange += 1; }
+        if (inputAction == InputAction.Down) { yChange -= 1; }
+        if (inputAction == InputAction.Up) { yChange += 1; }
 
         return yChange;
     }
 
+    private bool CanObjectAct(GameObject actingObject)
+    {
+        return CC.GetGP(actingObject).ActionEnd <= CurrentTurn;
+    }
+
+    private void AddCooldown(GameObject objectToCooldown, int cooldown)
+    {
+        CC.GetGP(objectToCooldown).ActionStart = CurrentTurn;
+        CC.GetGP(objectToCooldown).ActionEnd = CurrentTurn + cooldown;
+    }
+
+    private void CopyCooldown(GameObject objectToCooldown, GameObject objectToCopyCooldown)
+    {
+        CC.GetGP(objectToCooldown).ActionStart = CC.GetGP(objectToCopyCooldown).ActionStart;
+        CC.GetGP(objectToCooldown).ActionEnd = CC.GetGP(objectToCopyCooldown).ActionEnd;
+    }
+    
+    private void AddCooldownWithVisuals(GameObject objectToCooldown, int cooldown, VisualAction visualAction)
+    {
+        AddCooldown(objectToCooldown, cooldown);
+        CC.GetGP(objectToCooldown).CurrentVisualAction = visualAction;
+        AddToAnimationList(objectToCooldown);
+    }
+
+    private void CopyCooldownWithDifferentVisuals(GameObject objectToCooldown, GameObject objectToCopyCooldown, VisualAction separateVisualAction)
+    {
+        CopyCooldown(objectToCooldown, objectToCopyCooldown);
+        CC.GetGP(objectToCooldown).CurrentVisualAction = separateVisualAction;
+        AddToAnimationList(objectToCooldown);
+    }
+
+
+    #endregion
+
+    #region ActionFramework
+        private List<InputAction> GetCurrentActionInputs()
+    {
+        List<InputAction> actions = new List<InputAction>();
+        List<InputAction> noActions = new List<InputAction>();
+        noActions.Add(InputAction.None);
+
+        if (Input.GetKey("up") || Input.GetKey("w"))
+        {
+            actions.Add(InputAction.Up);
+        }
+        if (Input.GetKey("down") || Input.GetKey("s"))
+        {
+            actions.Add(InputAction.Down);
+        }
+        if (Input.GetKey("left") || Input.GetKey("a"))
+        {
+            actions.Add(InputAction.Left);
+        }
+        if (Input.GetKey("right") || Input.GetKey("d"))
+        {
+            actions.Add(InputAction.Right);
+        }
+
+        return actions.Count == 1 ? actions : noActions;
+    }
+    
     private List<RequestedAction> GetRequestedActions()
     {
         List<RequestedAction> requestedActions = new List<RequestedAction>();
         
-        List<Actions> currentInputtedActions = GetCurrentActionInputs(); // Currently only returns 1 action;
-        Actions inputtedAction = currentInputtedActions[0];
+        List<InputAction> currentInputtedActions = GetCurrentActionInputs(); // Currently only returns 1 action;
+        InputAction inputtedInputAction = currentInputtedActions[0];
 
-        if (inputtedAction != Actions.None)
+        if (inputtedInputAction != InputAction.None)
         {
             foreach (var playerControlledObject in _playerControlledObjects)
             {
-                requestedActions.Add(new RequestedAction(playerControlledObject, inputtedAction));
+                if (CanObjectAct(playerControlledObject))
+                {
+                    requestedActions.Add(new RequestedAction(playerControlledObject, inputtedInputAction));
+                }
             }
         }
 
@@ -181,10 +324,13 @@ public class BoardManager : MonoBehaviour
         }
     }
 
-    private bool AttemptMoveAction(RequestedAction currentRequestedAction)
+    #endregion
+
+    #region ActionAttempters
+        private bool AttemptMoveAction(RequestedAction currentRequestedAction)
     {
-        int xChange = GetXChange(currentRequestedAction.requestedAction);
-        int yChange = GetYChange(currentRequestedAction.requestedAction);
+        int xChange = GetXChange(currentRequestedAction.RequestedInputAction);
+        int yChange = GetYChange(currentRequestedAction.RequestedInputAction);
 
         if (xChange == 0 && yChange == 0)
         {
@@ -210,13 +356,19 @@ public class BoardManager : MonoBehaviour
         
         // We made it!
         _levelGrid.rawMoveObject(oldX, oldY, newX, newY, currentRequestedAction.requestingObject);
+
+        AddCooldownWithVisuals(currentRequestedAction.requestingObject, Globals.TURNS_FOR_BASIC_ACTION, VisualAction.Walking);
+
+        AddTriggerEventsForTile(oldX, oldY, EventGroupTrigger.onMove);
+        AddTriggerEventsForTile(newX, newY, EventGroupTrigger.onMove);
+        
         return true;
     }
     
     private bool AttemptPushAction(RequestedAction currentRequestedAction)
     {
-        int xChange = GetXChange(currentRequestedAction.requestedAction);
-        int yChange = GetYChange(currentRequestedAction.requestedAction);
+        int xChange = GetXChange(currentRequestedAction.RequestedInputAction);
+        int yChange = GetYChange(currentRequestedAction.RequestedInputAction);
 
         if (xChange == 0 && yChange == 0)
         {
@@ -249,28 +401,47 @@ public class BoardManager : MonoBehaviour
         {
             return false; // If any object we are pushing takes up space, and there is no space for it to move to.
         }
+
+        if (!itemsToPush.TrueForAll(CanObjectAct))
+        {
+            // At least one item is on cooldown and can't be pushed.
+            return false;
+        }
         
         // We made it!
-        
         // Move pusher.
         _levelGrid.rawMoveObject(oldX, oldY, newX, newY, currentRequestedAction.requestingObject);
+        AddCooldownWithVisuals(currentRequestedAction.requestingObject, Globals.TURNS_FOR_HEAVY_PUSH, VisualAction.Pushing);
 
         // Move all the items to push.
         foreach (var itemToPush in itemsToPush)
         {
             _levelGrid.rawMoveObject(pushedNewX, pushedNewY, itemToPush);
+            CopyCooldownWithDifferentVisuals(itemToPush, currentRequestedAction.requestingObject, VisualAction.BeingPushed);
         }
+        
+        AddTriggerEventsForTile(oldX, oldY, EventGroupTrigger.onMove);
+        AddTriggerEventsForTile(newX, newY, EventGroupTrigger.onMove);
+        AddTriggerEventsForTile(pushedNewX, pushedNewY, EventGroupTrigger.onMove);
         
         return true;
     }
 
-    private void HandleTurn()
+    #endregion
+    
+    #endregion
+
+    #region Graphics Functions
+
+    private void AddToAnimationList(GameObject objectToAnimate)
     {
-        HandleActions();
-        CurrentTurn++;
+        if (!_objectsToAnimateMove.Contains(objectToAnimate))
+        {
+            _objectsToAnimateMove.Add(objectToAnimate);
+        }
     }
 
-    private void Update()
+    private void InstantMovement()
     {
         _levelGrid.forEachCell(
             (x, y, cell) =>
@@ -283,9 +454,61 @@ public class BoardManager : MonoBehaviour
             }
         );
     }
+    private void Update()
+    {
+        // To debug;
+        // InstantMovement();
+        // return;
+        
+        
+        for (int i = _objectsToAnimateMove.Count - 1; i >= 0 ; i--)
+        {
+            GameObject objectToAnimate = _objectsToAnimateMove[i];
+            Vector2 targetLocation = new Vector2(CC.GetGP(objectToAnimate).BoardX, CC.GetGP(objectToAnimate).BoardY);
+
+            int actionStart = CC.GetGP(objectToAnimate).ActionStart;
+            int actionEnd = CC.GetGP(objectToAnimate).ActionEnd;
+            int totalTurnsForAction = actionEnd - actionStart;
+            int turnsLeft = actionEnd - CurrentTurn;
+            int turnsAlreadyPassed = CurrentTurn - actionStart;
+            float totalTimeToReachTarget = totalTurnsForAction * Globals.SECONDS_WITHIN_TURN;
+            
+            // Always update to correct sprite
+            ISpriteChanger spriteChanger = CC.GetItemFromInterfaceCache<ISpriteChanger>(objectToAnimate);
+            if (spriteChanger != null)
+            {
+                SpriteRenderer spriteRenderer = CC.GetItemFromInterfaceCache<SpriteRenderer>(objectToAnimate);
+                spriteRenderer.sprite = spriteChanger.GetNewSprite();
+            }
+
+            // If turn isn't over.
+            if (CC.GetGP(objectToAnimate).ActionEnd > CurrentTurn)
+            {
+                if (!_objectsToAnimateMoveTimer.ContainsKey(objectToAnimate))
+                {
+                    _objectsToAnimateMoveTimer.Add(objectToAnimate, 0f);
+                }
+
+                _objectsToAnimateMoveTimer[objectToAnimate] += Time.deltaTime / totalTimeToReachTarget;
+                
+                objectToAnimate.transform.position = Vector2.MoveTowards(objectToAnimate.transform.position,
+                    targetLocation, Time.deltaTime//_objectsToAnimateMoveTimer[objectToAnimate]  // JANK
+                    );
+            }
+            else
+            {
+                objectToAnimate.transform.position = targetLocation;
+                _objectsToAnimateMove.RemoveAt(i);
+                _objectsToAnimateMoveTimer.Remove(objectToAnimate);
+            }
+        }
+    }
 
     private void OnGUI()
     {
         GUI.Label(new Rect(10,10,100,100), CurrentTurn.ToString());
     }
+
+    #endregion
+
 }

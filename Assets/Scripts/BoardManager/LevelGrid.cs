@@ -33,8 +33,8 @@ public class LevelGrid : ScriptableObject
 
     public void rawMoveObject(int newX, int newY, GameObject gameObjectToMove)
     {
-        int oldX = CC.GetIGridProperties(gameObjectToMove).BoardX;
-        int oldY = CC.GetIGridProperties(gameObjectToMove).BoardY;
+        int oldX = CC.GetGP(gameObjectToMove).BoardX;
+        int oldY = CC.GetGP(gameObjectToMove).BoardY;
         
         rawMoveObject(oldX, oldY, newX, newY, gameObjectToMove);
     }

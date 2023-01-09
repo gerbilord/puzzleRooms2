@@ -1,4 +1,4 @@
-public enum Actions
+public enum InputAction
 { 
     None,
     Up,

@@ -1,14 +1,28 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
 using System.Linq;
+using Microsoft.VisualBasic.FileIO;
 
 public static class CsvUtils
 {
     public static string[][] CsvToArray(string filePath)
     {
-        var data = File.ReadLines(filePath).Select(x => x.Split(',')).ToArray();
+        List<string[]> rows = new List<string[]>();
+
+        using (TextFieldParser parser = new TextFieldParser(filePath))
+        {
+            parser.TextFieldType = FieldType.Delimited;
+            parser.SetDelimiters(",");
+            while (!parser.EndOfData) 
+            {
+                rows.Add(parser.ReadFields());
+            }
+        }
+
+        var data = rows.ToArray();
         
         string[][] transposeData = new string[data[0].Length][];
 
@@ -21,7 +35,7 @@ public static class CsvUtils
         {
             for (int j = 0; j < data[i].Length; j++)
             {
-                transposeData[j][i] = data[data.Length-i-1][j];
+                transposeData[j][i] = data[data.Length - i - 1][j];
             }
         }
         
@@ -33,4 +47,5 @@ public static class CsvUtils
         var fullFilePath = Application.dataPath + "/Levels/" + levelName;
         return fullFilePath;
     }
+    
 }

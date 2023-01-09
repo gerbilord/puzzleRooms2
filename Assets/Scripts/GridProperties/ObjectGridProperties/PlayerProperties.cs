@@ -4,8 +4,14 @@ using UnityEngine;
 
 public class PlayerProperties : MonoBehaviour, IGridProperties
 {
-    public int BoardX { get; set; }
-    public int BoardY { get; set; }
+    public int BoardX { get; set; } = 0;
+    public int BoardY { get; set; } = 0;
+    
+    public int ActionStart { get; set; } = 0;
+    public int ActionEnd { get; set; } = 0;
+
+    public VisualAction CurrentVisualAction { get; set; } = VisualAction.None;
+    public int eventGroupId { get; set; }
 
     public bool DoesOccupyTile()
     {

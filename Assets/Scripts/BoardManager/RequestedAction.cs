@@ -3,11 +3,11 @@ using UnityEngine;
 public class RequestedAction
 {
     public GameObject requestingObject { get; set; }
-    public Actions requestedAction { get; set; }
+    public InputAction RequestedInputAction { get; set; }
 
-    public RequestedAction(GameObject requestingObject, Actions requestedAction)
+    public RequestedAction(GameObject requestingObject, InputAction requestedInputAction)
     {
         this.requestingObject = requestingObject;
-        this.requestedAction = requestedAction;
+        this.RequestedInputAction = requestedInputAction;
     }
 }
