@@ -10,11 +10,15 @@ public class BoardManager : MonoBehaviour
 {
     #region Properties
     public String levelName;
+    private bool _didWin = false;
+    private GameObject _winOverlay;
     [SerializeField] private Transform cameraTransform;
     
     private LevelGrid _levelGrid;
     private List<GameObject> _playerControlledObjects;
-    
+
+    private List<IVictoryCondition> _victoryConditions = new List<IVictoryCondition>();
+
     private List<GameObject> _objectsToAnimateMove;
     private Dictionary<GameObject, float> _objectsToAnimateMoveTimer = new Dictionary<GameObject, float>();
 
@@ -37,8 +41,7 @@ public class BoardManager : MonoBehaviour
     }
 
     #endregion
-    
-    
+
     #region Startup functions
     void Start()
     {
@@ -48,8 +51,21 @@ public class BoardManager : MonoBehaviour
         _objectsToAnimateMoveTimer = new Dictionary<GameObject, float>();
         
         LoadLevel();
+        LoadGUI();
         InvokeRepeating(nameof(HandleTurn), Globals.TIME_BEFORE_STARTING_TURNS, 1/Globals.TURNS_PER_SECOND);
         // CancelInvoke to stop
+    }
+
+    private void LoadGUI()
+    {
+        // _winOverlay = 
+        _winOverlay = Instantiate(Resources.Load("GUI/pf_victoryShader")) as GameObject;
+        SpriteRenderer winOverlayRenderer = CC.GetItemFromInterfaceCache<SpriteRenderer>(_winOverlay);
+        var tempColor = winOverlayRenderer.color;
+        tempColor.a = .5f;
+        winOverlayRenderer.color = tempColor;
+        _winOverlay.transform.position = new Vector3((float)_levelGrid.SizeX()/2 -0.5f, (float)_levelGrid.SizeY()/2 -0.5f, 0);
+        _winOverlay.SetActive(false);
     }
 
     private void LoadLevel()
@@ -89,6 +105,7 @@ public class BoardManager : MonoBehaviour
 
         return newGameObject;
     }
+
     private List<GameObject> StringCellToGameObjects(int x, int y, string rawCellText)
     {
         string[] stringItemsInCell = rawCellText.Split(',');
@@ -97,23 +114,14 @@ public class BoardManager : MonoBehaviour
 
         foreach (var stringItem in stringItemsInCell)
         {
-            String[] parts = stringItem.Split(':');
-            String itemStringName = parts[0].Trim();
-            int eventGroupId = -1;
-            
-            if (parts.Length > 1)
-            {
-                eventGroupId = Int16.Parse(parts[1]);
-            }
+            LevelLoadProperties objectLevelLoadProperties = new LevelLoadProperties(stringItem);
+            String itemStringName = objectLevelLoadProperties.ObjectName;
 
             GameObject newGameObject = null;
-            if (itemStringName == "player1")
-            {
-                newGameObject = CreateAndSetupGameObject(x, y, "GridBoundPrefabs/pf_player1");
-                _playerControlledObjects.Add(newGameObject);
-            } else if (itemStringName == "wall") { newGameObject = CreateAndSetupGameObject(x, y, "GridBoundPrefabs/pf_wall"); } 
+            if (itemStringName == "player1") { newGameObject = CreateAndSetupGameObject(x, y, "GridBoundPrefabs/pf_player1"); _playerControlledObjects.Add(newGameObject); } 
+            else if (itemStringName == "wall") { newGameObject = CreateAndSetupGameObject(x, y, "GridBoundPrefabs/pf_wall"); } 
             else if (itemStringName == "boulder") { newGameObject = CreateAndSetupGameObject(x, y, "GridBoundPrefabs/pf_boulder"); } 
-            else if (itemStringName == "goal") { newGameObject = CreateAndSetupGameObject(x, y, "GridBoundPrefabs/pf_goal"); }
+            else if (itemStringName == "goal") { newGameObject = CreateAndSetupGameObject(x, y, "GridBoundPrefabs/pf_goal"); _victoryConditions.Add(CC.GetItemFromInterfaceCache<IVictoryCondition>(newGameObject));}
             else if (itemStringName == "basicButton") { newGameObject = CreateAndSetupGameObject(x, y, "GridBoundPrefabs/pf_basicButton"); }
             else if (itemStringName == "basicGate") { newGameObject = CreateAndSetupGameObject(x, y, "GridBoundPrefabs/pf_basicGate"); }
 
@@ -121,11 +129,20 @@ public class BoardManager : MonoBehaviour
             {
                 gameObjectsInCell.Add(newGameObject);
 
-                AddObjectToEventGroup(newGameObject, eventGroupId);
+                AddObjectToEventGroup(newGameObject, objectLevelLoadProperties.EventGroupId);
+                ModifySpriteColor(newGameObject, objectLevelLoadProperties.Color);
             }
         }
 
         return gameObjectsInCell;
+    }
+
+    private void ModifySpriteColor(GameObject newGameObject, Color color)
+    {
+        if (color != Color.clear) {
+            var spriteRenderer = CC.GetItemFromInterfaceCache<SpriteRenderer>(newGameObject);
+            spriteRenderer.color = color;
+        }
     }
 
     private void AddObjectToEventGroup(GameObject gameObject, int eventGroupId)
@@ -134,7 +151,16 @@ public class BoardManager : MonoBehaviour
         {
             if (!_eventGroups.ContainsKey(eventGroupId))
             {
-                var newGroup = new ActivationEventGroup(); // JANK this will be dynamic based on a different csv cell
+                var isFlagOrPlayer = CC.GetItemFromInterfaceCache<IFlag>(gameObject) != null || CC.GetItemFromInterfaceCache<IPlayer>(gameObject) != null;
+                IEventGroup newGroup;  // JANK this will be dynamic based on a different csv cell, not some case statement
+                if (isFlagOrPlayer)
+                {
+                    newGroup = new FlagVictoryEventGroup();
+                }
+                else
+                {
+                    newGroup = new ActivationEventGroup();
+                }
                 newGroup.EventGroupId = eventGroupId;
                 _eventGroups.Add(eventGroupId, newGroup);
             }
@@ -152,7 +178,16 @@ public class BoardManager : MonoBehaviour
     {
         HandleActions();
         HandleEvents();
+        HandleVictory();
         CurrentTurn++;
+    }
+
+    private void HandleVictory()
+    {
+        if (_victoryConditions.Count > 0 && !_didWin)
+        {
+            _didWin = _victoryConditions.TrueForAll(condition => condition.IsVictoryConditionMet);
+        }
     }
 
     private void HandleEvents()
@@ -459,7 +494,11 @@ public class BoardManager : MonoBehaviour
         // To debug;
         // InstantMovement();
         // return;
-        
+
+        if (_didWin)
+        {
+            _winOverlay.SetActive(true);
+        }
         
         for (int i = _objectsToAnimateMove.Count - 1; i >= 0 ; i--)
         {
@@ -506,6 +545,14 @@ public class BoardManager : MonoBehaviour
 
     private void OnGUI()
     {
+        if (_didWin)
+        {
+            GUIStyle largeFont = new GUIStyle();
+            largeFont.fontSize = 100;
+            largeFont.normal.textColor = Color.white;
+            GUI.Label(new Rect(Screen.width/2f-250, Screen.height/2f-150, 500, 500), "VICTORY", largeFont);
+        }
+        GUI.Label(new Rect(20,20,100,100), CsvUtils.GetLevelFilePath(levelName));
         GUI.Label(new Rect(10,10,100,100), CurrentTurn.ToString());
     }
 

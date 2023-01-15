@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerProperties : MonoBehaviour, IGridProperties
+public class PlayerProperties : MonoBehaviour, IGridProperties, IPlayer
 {
     public int BoardX { get; set; } = 0;
     public int BoardY { get; set; } = 0;

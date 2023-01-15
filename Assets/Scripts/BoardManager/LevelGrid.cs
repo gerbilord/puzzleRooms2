@@ -81,4 +81,14 @@ public class LevelGrid : ScriptableObject
     {
         return _levelGrid[x][y];
     }
+
+    public int SizeX()
+    {
+        return _levelGrid.Count();
+    }
+
+    public int SizeY()
+    {
+        return _levelGrid[0].Count;
+    }
 }

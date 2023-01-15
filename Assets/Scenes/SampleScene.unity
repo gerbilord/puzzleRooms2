@@ -132,7 +132,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -1057420076153345597, guid: a9f5882a74b86f240ac36270deb7911f, type: 3}
       propertyPath: levelName
-      value: defaultLevel.csv
+      value: testLevel.csv
       objectReference: {fileID: 0}
     - target: {fileID: -1057420076153345597, guid: a9f5882a74b86f240ac36270deb7911f, type: 3}
       propertyPath: cameraTransform
