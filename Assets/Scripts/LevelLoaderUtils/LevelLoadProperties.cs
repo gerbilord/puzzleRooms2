@@ -1,11 +1,12 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class LevelLoadProperties
 {
     public string ObjectName = null; 
     public Color Color = Color.clear;
-    public int EventGroupId = -1;
+    public List<int> EventGroupIds = new List<int>();
 
     public LevelLoadProperties(string rawLevelLoadText)
     {
@@ -31,7 +32,7 @@ public class LevelLoadProperties
                         if(value.ToLower() == "white"){this.Color = Color.white;}
                     } else if(key.ToLower() == "eventGroup" || key.ToLower() == "eg")
                     {
-                        EventGroupId = Int16.Parse(value);
+                        EventGroupIds.Add(Int16.Parse(value));
                     }
                     
                 }

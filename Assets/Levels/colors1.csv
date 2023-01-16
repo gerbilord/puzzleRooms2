@@ -1,0 +1,11 @@
+﻿wall,wall,wall,wall,wall,wall,wall
+wall,,,,,,wall
+wall,,,,,,wall
+wall,,wall,,,,wall
+wall,,,,,,wall
+wall,,player1:eg=2:c=blue,goal:eg=1:c=red,,,wall
+wall,,player1:eg=1:c=red,goal:eg=2:c=blue,,,wall
+wall,,,,,,wall
+wall,,,,,boulder:c=blue,wall
+wall,,,,,,wall
+wall,wall,wall,wall,wall,wall,wall

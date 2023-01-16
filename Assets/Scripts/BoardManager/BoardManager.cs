@@ -100,8 +100,6 @@ public class BoardManager : MonoBehaviour
         newGameObject.transform.position = new Vector3(x, y);
         ComponentCache.GetGP(newGameObject).BoardX = x;
         ComponentCache.GetGP(newGameObject).BoardY = y;
-        
-        ComponentCache.GetGP(newGameObject).eventGroupId = -1;
 
         return newGameObject;
     }
@@ -129,7 +127,7 @@ public class BoardManager : MonoBehaviour
             {
                 gameObjectsInCell.Add(newGameObject);
 
-                AddObjectToEventGroup(newGameObject, objectLevelLoadProperties.EventGroupId);
+                AddObjectToEventGroup(newGameObject, objectLevelLoadProperties.EventGroupIds);
                 ModifySpriteColor(newGameObject, objectLevelLoadProperties.Color);
             }
         }
@@ -145,9 +143,9 @@ public class BoardManager : MonoBehaviour
         }
     }
 
-    private void AddObjectToEventGroup(GameObject gameObject, int eventGroupId)
+    private void AddObjectToEventGroup(GameObject gameObject, List<int> eventGroupIds)
     {
-        if (eventGroupId != -1)
+        foreach (var eventGroupId in eventGroupIds)
         {
             if (!_eventGroups.ContainsKey(eventGroupId))
             {
@@ -165,7 +163,7 @@ public class BoardManager : MonoBehaviour
                 _eventGroups.Add(eventGroupId, newGroup);
             }
 
-            CC.GetGP(gameObject).eventGroupId = eventGroupId;
+            CC.GetGP(gameObject).EventGroupIds.Add(eventGroupId);
             _eventGroups[eventGroupId].AddObjectToEventGroup(gameObject);
         }
     }
@@ -192,13 +190,13 @@ public class BoardManager : MonoBehaviour
 
     private void HandleEvents()
     {
+        // Possibly only trigger each event group once? Keep info by list?
         foreach (var requestedEvent in _requestedEvents)
         {
             var triggeredEvent = requestedEvent.triggeredEvent;
             var triggeredObject = requestedEvent.triggeredObject;
-            var eventGroupId = CC.GetGP(triggeredObject).eventGroupId;
 
-            if (eventGroupId != -1)
+            foreach (var eventGroupId in CC.GetGP(triggeredObject).EventGroupIds)
             {
                 _eventGroups[eventGroupId].TriggerEventGroup(triggeredEvent, this);
             }

@@ -13,7 +13,7 @@ public class BasicGateProperties : MonoBehaviour, IGridProperties, IGate, ISprit
     public int ActionEnd { get; set; } = 0;
 
     public VisualAction CurrentVisualAction { get; set; } = VisualAction.None;
-    public int eventGroupId { get; set; }
+    public List<int> EventGroupIds { get; set; } = new List<int>();
 
     public bool DoesOccupyTile()
     {
