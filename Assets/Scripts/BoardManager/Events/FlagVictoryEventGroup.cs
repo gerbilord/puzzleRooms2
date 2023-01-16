@@ -20,6 +20,11 @@ public class FlagVictoryEventGroup: IEventGroup
         }
     }
 
+    public void InitiateState(BoardManager boardManager)
+    {
+        // NOOP
+    }
+
     public void TriggerEventGroup(EventGroupTrigger eventGroupTrigger, BoardManager boardManager)
     {
         if (eventGroupTrigger != EventGroupTrigger.onMove)

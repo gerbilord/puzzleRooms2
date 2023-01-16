@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BasicGateProperties : MonoBehaviour, IGridProperties, IGate, ISpriteChanger
+public class BasicGateProperties : MonoBehaviour, IGridProperties, ISpriteChanger, IActivatee
 {
     [SerializeField] private Sprite openSprite;
     [SerializeField] private Sprite closeSprite;
@@ -21,7 +21,7 @@ public class BasicGateProperties : MonoBehaviour, IGridProperties, IGate, ISprit
     }
     public bool IsActivated { get; set; }
     public bool IsClosed { get; set; } = true;
-    public bool ShouldClose()
+    public virtual bool ShouldClose()
     {
         return !IsActivated;
     }
@@ -29,5 +29,50 @@ public class BasicGateProperties : MonoBehaviour, IGridProperties, IGate, ISprit
     public Sprite GetNewSprite()
     {
         return IsClosed ? closeSprite : openSprite;
+    }
+
+    public void UpdateIsActivated(BoardManager boardManager)
+    {
+        var eventGroups = boardManager.GetEventGroups();
+
+        IsActivated = false; // False by default.
+        
+        foreach (var eventGroupId in EventGroupIds)
+        {
+            var eventGroup = eventGroups[eventGroupId];
+
+            if (eventGroup is IActivationGroup activationGroup)
+            {
+                if (activationGroup.IsGroupActive(boardManager))
+                {
+                    IsActivated = true;
+                    break;
+                }
+            }
+        }
+        
+        // Might as well.
+        AttemptToCloseGate(boardManager);
+        AttemptToOpenGate(boardManager);
+    }
+
+    private void AttemptToCloseGate(BoardManager boardManager)
+    {
+        if(IsClosed){return;} // Gate already closed. Can't close it.
+
+        if (!boardManager.GetLevelGrid().IsTileOccupied(BoardX, BoardY) && ShouldClose())
+        {
+            IsClosed = true;
+            boardManager.AddObjectToAnimate(gameObject);
+        }
+    }
+
+    private void AttemptToOpenGate(BoardManager boardManager)
+    {
+        if (!ShouldClose())
+        {
+            IsClosed = false;
+            boardManager.AddObjectToAnimate(gameObject);
+        }
     }
 }

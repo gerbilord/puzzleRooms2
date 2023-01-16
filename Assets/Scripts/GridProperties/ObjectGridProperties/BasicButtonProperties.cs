@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
-public class BasicButtonProperties : MonoBehaviour, IGridProperties, IButton
+public class BasicButtonProperties : MonoBehaviour, IGridProperties, IActivator
 {
     public int BoardX { get; set; } = 0;
     public int BoardY { get; set; } = 0;
@@ -18,5 +19,10 @@ public class BasicButtonProperties : MonoBehaviour, IGridProperties, IButton
     public bool IsActivated()
     {
         return IsPressed;
+    }
+
+    public bool CalculateIfActive(BoardManager boardManager)
+    {
+        return boardManager.GetLevelGrid().GetTile(BoardX, BoardY).Any(item=>ComponentCache.GetGP(item).DoesOccupyTile());
     }
 }

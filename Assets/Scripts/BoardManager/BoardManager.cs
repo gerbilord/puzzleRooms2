@@ -35,6 +35,11 @@ public class BoardManager : MonoBehaviour
         return _levelGrid;
     }
 
+    public Dictionary<int, IEventGroup> GetEventGroups()
+    {
+        return _eventGroups;
+    }
+
     public void AddObjectToAnimate(GameObject gameObjectToAnimate)
     {
         _objectsToAnimateMove.Add(gameObjectToAnimate);
@@ -51,9 +56,18 @@ public class BoardManager : MonoBehaviour
         _objectsToAnimateMoveTimer = new Dictionary<GameObject, float>();
         
         LoadLevel();
+        SetupEventState();
         LoadGUI();
         InvokeRepeating(nameof(HandleTurn), Globals.TIME_BEFORE_STARTING_TURNS, 1/Globals.TURNS_PER_SECOND);
         // CancelInvoke to stop
+    }
+
+    private void SetupEventState()
+    {
+        foreach (var (key, value) in _eventGroups)
+        {
+            value.InitiateState(this);
+        }
     }
 
     private void LoadGUI()
@@ -122,6 +136,7 @@ public class BoardManager : MonoBehaviour
             else if (itemStringName == "goal") { newGameObject = CreateAndSetupGameObject(x, y, "GridBoundPrefabs/pf_goal"); _victoryConditions.Add(CC.GetItemFromInterfaceCache<IVictoryCondition>(newGameObject));}
             else if (itemStringName == "basicButton") { newGameObject = CreateAndSetupGameObject(x, y, "GridBoundPrefabs/pf_basicButton"); }
             else if (itemStringName == "basicGate") { newGameObject = CreateAndSetupGameObject(x, y, "GridBoundPrefabs/pf_basicGate"); }
+            else if (itemStringName == "reverseGate") { newGameObject = CreateAndSetupGameObject(x, y, "GridBoundPrefabs/pf_reverseGate"); }
 
             if (newGameObject != null)
             {

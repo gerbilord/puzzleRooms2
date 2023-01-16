@@ -1,10 +1,10 @@
 ﻿wall,wall,wall,wall,wall,wall,wall,wall,wall,wall,wall,wall,wall,wall,wall
-wall,player1:100,wall,,,,,wall,,,,,,,wall
-wall,,wall,,boulder,,,wall,,basicButton:3,,,,,wall
+wall,player1:eg=100,wall,,,,,wall,,,,,,,wall
+wall,,wall,,boulder,,,wall,,basicButton:eg=3,,,,,wall
 wall,,wall,,,,,wall,,,,,,,wall
-wall,,wall,,,,,wall,,,basicGate:3,basicGate:3,basicGate:3,,wall
-wall,boulder,basicGate:1,,,basicButton:2,,basicGate:2,,,basicGate:3,"boulder,  goal:100",basicGate:3,,wall
-wall,,wall,,,,,wall,,,basicGate:3,basicGate:3,basicGate:3,,wall
+wall,,wall,,,,,wall,,,basicGate:eg=3,basicGate:eg=3,basicGate:eg=3,,wall
+wall,boulder,basicGate:eg=1,,,basicButton:eg=2,,basicGate:eg=2,,,basicGate:eg=3,"boulder,  goal:eg=100",basicGate:eg=3,,wall
+wall,,wall,,,,,wall,,,basicGate:eg=3,basicGate:eg=3,basicGate:eg=3,,wall
 wall,,wall,,,,,wall,,,,,,,wall
 wall,,wall,,,,,wall,,,,,,,wall
 wall,,wall,,,,,wall,,,,,,,wall
