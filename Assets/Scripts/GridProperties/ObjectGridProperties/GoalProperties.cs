@@ -12,5 +12,6 @@ public class GoalProperties : MonoBehaviour, IGridProperties, IFlag, IVictoryCon
 
     public VisualAction CurrentVisualAction { get; set; } = VisualAction.None;
     public List<string> EventGroupIds { get; set; } = new List<string>();
+
     public bool IsVictoryConditionMet { get; set; } = false;
 }
