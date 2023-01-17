@@ -41,6 +41,15 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Floor Objects
+    uniqueID: 2416110419
+    locked: 0
+  - name: Standing Objects
+    uniqueID: 3867872789
+    locked: 0
+  - name: Physical Objects
+    uniqueID: 2457675709
+    locked: 0
   - name: Gameplay Overlays
     uniqueID: 916379999
     locked: 0
