@@ -1,10 +1,10 @@
 ﻿wall,wall,wall,wall,wall,wall,wall
-wall,"cloneSpawn:c=blue:cloneId=0:eg=2, cloneEnd:c=red",,,,,wall
+wall,cloneSpawn:c=blue:cloneId=0:eg=2,,,,,wall
 wall,,,,basicButton:eg=4,reverseGate:eg=4,wall
 wall,,wall,,,basicGate:eg=4,wall
 wall,,,,,,wall
-wall,,player:eg=2:c=blue,goal:eg=1:c=red,,,wall
-wall,,player:eg=1:c=red,goal:eg=2:c=blue,,,wall
+wall,,cloneSpawn:spawnOrder=0:c=red,,,,wall
+wall,,,goal:eg=2:c=blue,,,wall
 wall,,,,,,wall
 wall,,,,,boulder:c=blue,wall
 wall,,,,,,wall

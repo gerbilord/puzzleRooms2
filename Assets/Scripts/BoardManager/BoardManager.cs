@@ -403,10 +403,6 @@ public class BoardManager : MonoBehaviour
         List<RequestedAction> requestedActions = new List<RequestedAction>();
         _inputHistory[CurrentIteration].Add(GetCurrentActionInputs()[0]);
 
-        if (CurrentIteration > 0)
-        {
-            Debug.Log("HERE");
-        }
         for (var playBackIteration = CurrentIteration; playBackIteration > -1; playBackIteration--)
         {
             requestedActions.AddRange(GetRequestedActionsForIteration(playBackIteration));
@@ -423,11 +419,6 @@ public class BoardManager : MonoBehaviour
         var inputControlledObjects = _inputControlledObjects[iterationNumber];
 
         InputAction currentAction = InputAction.None;
-
-        if (CurrentIteration > 0)
-        {
-            Debug.Log("CMON");
-        }
 
         if(inputHistory.Count > CurrentTurn)
         { 
@@ -647,7 +638,7 @@ public class BoardManager : MonoBehaviour
                     _objectsToAnimateMoveTimer.Add(objectToAnimate, 0f);
                 }
 
-                _objectsToAnimateMoveTimer[objectToAnimate] += Time.deltaTime / totalTimeToReachTarget;
+                _objectsToAnimateMoveTimer[objectToAnimate] += Time.deltaTime / totalTimeToReachTarget * Globals.MAGIC_ANIMATION_NUMBER;
                 
                 objectToAnimate.transform.position = Vector2.MoveTowards(objectToAnimate.transform.position,
                     targetLocation, Time.deltaTime//_objectsToAnimateMoveTimer[objectToAnimate]  // JANK

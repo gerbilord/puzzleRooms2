@@ -6,11 +6,11 @@ cloneEnd:c=red:cloneId=1,
 goal:eg=200:c=red",wall
 wall,,,,,,wall
 wall,,,,,,wall
-wall,,basicGate:eg=10,,reverseGate:eg=10,,wall
+wall,,,,,,wall
 wall,,,,,,wall
 wall,,,wall,,,wall
-wall,,,basicButton:eg=10,,,wall
-wall,,boulder,,,,wall
+wall,,,,,,wall
+wall,,,,,,wall
 wall,"cloneSpawn:c=blue:cloneId=0:eg=100,
 goal:eg=400:c=yellow",,,,"cloneSpawn:c=yellow:cloneId=3:eg=400,
 cloneEnd:c=green:cloneId=2,

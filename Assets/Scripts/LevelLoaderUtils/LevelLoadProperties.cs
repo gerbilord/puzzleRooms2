@@ -35,7 +35,7 @@ public class LevelLoadProperties
                     {
                         EventGroupIds.Add(value.Trim().ToLower());
                     }
-                    else if(key.ToLower() == "cloneid")
+                    else if(key.ToLower() == "cloneid" || key.ToLower() == "spawnorder")
                     {
                         CloneId = Int16.Parse(value);
                     }

@@ -1,5 +1,5 @@
 ﻿wall,wall,wall,wall,wall,wall,wall
-wall,wall,,goal:1,,wall,wall
+wall,wall,,goal:eg=1,,wall,wall
 wall,boulder,boulder,,boulder,boulder,wall
 wall,,boulder,boulder,boulder,,wall
 wall,boulder,,,,boulder,wall
@@ -7,5 +7,5 @@ wall,,boulder,boulder,boulder,,wall
 wall,,,,,,wall
 wall,,,,,,wall
 wall,,,,,,wall
-wall,,,player1:1,,,wall
+wall,,,cloneSpawn:eg=1:cloneId=0,,,wall
 wall,wall,wall,wall,wall,wall,wall
