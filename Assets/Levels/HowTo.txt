@@ -2,11 +2,13 @@ Tile List:
 
 wall - nothing can move through it
 boulder - you can push it, but can't move through it
-goal - if all goals have a player (with a corresponding eventGroup) standing on them, you win!
+goal - if all goals have a player/clone (with a corresponding eventGroup) standing on them, you win! If no eventGroup is specified, the flag can be triggered by any player/clone
+boulderGoal - if all boulderGoals have a boulder (with a corresponding eventGroup) on it, you win! If no eventGroup is specified, the flag can be triggered by any boulder.
 basicButton - if something that takes up space is on it, it activates anything in its event group. (wall, player, boulder all take up space).
 basicGate - closed by default, if its eventGroup is active, open
 reverseGate - opposite of basic gate.
-cloneSpawn - where the players/clones will spawn. "cloneId" or "spawnOrder" used to say which time to spawn them. spawnOrder=0 means start game there. Any attributes given to cloneSpawn will be given to the player.
+player - alias for cloneSpawn:cloneId=0
+cloneSpawn - where the player/clones will spawn. "cloneId" or "spawnOrder" used to say which time to spawn them. spawnOrder=0 means start game there. Any attributes given to cloneSpawn will be given to the clone once spawned.
 cloneEnd - if a clone (with the corrosponding "cloneId" or "spawnOrder") steps on it, restart the level, but now spawn more clones.
 
 
@@ -18,3 +20,9 @@ Uses to give tiles attributes, done like so "goal:color=blue"
 color (or just 'c'): can be green, red, yellow, blue, or white.
 eventGroup (or just 'eg'): used to logically attach two things. Can be used multiple times. Must be greater than -1. Example: (basicGate:eg=1:eg=2) (basicButton:eg=1) (basicButton:eg=2). The basic gate will be opened by either button.
 cloneId (or 'spawnOrder'): special case eventGroup. Used to logically connect cloneSpawn/players and cloneEnd. If a clone steps on a cloneEnd with the same id. The game restarts but puts cloneId/spawnOrder one higher. Can only be used once.
+
+
+Examples are in savedLevels and excelFiles.
+
+I kepts some excelFiles to show some basic formatting you can do to make complicated levels easier to look at.
+savedLevels are just .csv files. Look at them for examples.

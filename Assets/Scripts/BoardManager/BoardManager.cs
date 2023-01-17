@@ -166,12 +166,29 @@ public class BoardManager : MonoBehaviour
             String itemStringName = objectLevelLoadProperties.ObjectName;
 
             GameObject newGameObject = null;
-            if (itemStringName == "player" && false) { newGameObject = CreateAndSetupGameObject(x, y, "GridBoundPrefabs/pf_player"); _inputControlledObjects[CurrentIteration].Add(newGameObject); // JANK MAYBE REMOVE?
-                CC.GetItemFromInterfaceCache<IHasCloneId>(newGameObject).CloneId = 0;
-            } 
-            else if (itemStringName == "wall") { newGameObject = CreateAndSetupGameObject(x, y, "GridBoundPrefabs/pf_wall"); } 
+            if (itemStringName == "player" ) // Alias
+            {
+                itemStringName = "cloneSpawn";
+                objectLevelLoadProperties.CloneId = 0;
+            }
+
+            if (itemStringName == "wall") { newGameObject = CreateAndSetupGameObject(x, y, "GridBoundPrefabs/pf_wall"); } 
             else if (itemStringName == "boulder") { newGameObject = CreateAndSetupGameObject(x, y, "GridBoundPrefabs/pf_boulder"); } 
-            else if (itemStringName == "goal") { newGameObject = CreateAndSetupGameObject(x, y, "GridBoundPrefabs/pf_goal"); _victoryConditions.Add(CC.GetItemFromInterfaceCache<IVictoryCondition>(newGameObject));}
+            else if (itemStringName == "goal")
+            {
+                newGameObject = CreateAndSetupGameObject(x, y, "GridBoundPrefabs/pf_goal");
+                if (objectLevelLoadProperties.EventGroupIds.Count == 0)
+                {
+                    objectLevelLoadProperties.EventGroupIds.Add(SpecialEventGroups.GENERIC_VICTORY_GROUP);
+                }
+            }
+            else if (itemStringName == "boulderGoal") {
+                newGameObject = CreateAndSetupGameObject(x, y, "GridBoundPrefabs/pf_boulderGoal");
+                if (objectLevelLoadProperties.EventGroupIds.Count == 0)
+                {
+                    objectLevelLoadProperties.EventGroupIds.Add(SpecialEventGroups.GENERIC_VICTORY_GROUP);
+                }
+            }
             else if (itemStringName == "basicButton") { newGameObject = CreateAndSetupGameObject(x, y, "GridBoundPrefabs/pf_basicButton"); }
             else if (itemStringName == "basicGate") { newGameObject = CreateAndSetupGameObject(x, y, "GridBoundPrefabs/pf_basicGate"); }
             else if (itemStringName == "reverseGate") { newGameObject = CreateAndSetupGameObject(x, y, "GridBoundPrefabs/pf_reverseGate"); } // CONSIDER ONLY ADDING SPECIAL CASE STUFF HERE? AND USE NAME TO LOAD STUFF AUTOMAGICALLY?
@@ -230,7 +247,8 @@ public class BoardManager : MonoBehaviour
                 IEventGroup newGroup;  // JANK this will be dynamic based on a different csv cell, not some case statement
                 if (isFlagOrPlayer)
                 {
-                    newGroup = new FlagVictoryEventGroup();
+                    newGroup = new VictoryEventGroup();
+                    _victoryConditions.Add((IVictoryCondition)newGroup);
                 }
                 else if(isCloneEnder)
                 {
@@ -276,7 +294,7 @@ public class BoardManager : MonoBehaviour
     {
         if (_victoryConditions.Count > 0 && !_didWin)
         {
-            _didWin = _victoryConditions.TrueForAll(condition => condition.IsVictoryConditionMet);
+            _didWin = _victoryConditions.TrueForAll(condition => condition.IsVictoryConditionMet(this));
         }
     }
 

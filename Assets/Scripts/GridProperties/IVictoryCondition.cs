@@ -1,6 +1,6 @@
 
 public interface IVictoryCondition
-{ 
-    public bool IsVictoryConditionMet { get; set; }
+{
+    public bool IsVictoryConditionMet(BoardManager boardManager);
 
 }

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BoulderProperties  : MonoBehaviour, IGridProperties
+public class BoulderProperties  : MonoBehaviour, IGridProperties, IBoulder
 {
     public int BoardX { get; set; } = 0;
     public int BoardY { get; set; } = 0;
