@@ -8,7 +8,7 @@ using UnityEngine;
 
 public class FlagVictoryEventGroup: IEventGroup
 {
-    public int EventGroupId { get; set; }
+    public string EventGroupId { get; set; }
     
     private List<GameObject> _gameObjectsInEventGroup = new List<GameObject>(); // Potential optimization. Only trigger for flags?
 

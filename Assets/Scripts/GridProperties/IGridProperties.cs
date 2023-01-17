@@ -12,7 +12,7 @@ public interface IGridProperties
     
     public VisualAction CurrentVisualAction { get; set; }
     
-    public List<int> EventGroupIds { get; set; }
+    public List<string> EventGroupIds { get; set; }
 
     public bool DoesOccupyTile()
     {

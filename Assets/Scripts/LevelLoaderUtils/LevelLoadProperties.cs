@@ -6,7 +6,8 @@ public class LevelLoadProperties
 {
     public string ObjectName = null; 
     public Color Color = Color.clear;
-    public List<int> EventGroupIds = new List<int>();
+    public List<string> EventGroupIds = new List<string>();
+    public int CloneId = -1;
 
     public LevelLoadProperties(string rawLevelLoadText)
     {
@@ -32,7 +33,11 @@ public class LevelLoadProperties
                         if(value.ToLower() == "white"){this.Color = Color.white;}
                     } else if(key.ToLower() == "eventGroup" || key.ToLower() == "eg")
                     {
-                        EventGroupIds.Add(Int16.Parse(value));
+                        EventGroupIds.Add(value.Trim().ToLower());
+                    }
+                    else if(key.ToLower() == "cloneid")
+                    {
+                        CloneId = Int16.Parse(value);
                     }
                     
                 }

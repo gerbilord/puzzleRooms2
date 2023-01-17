@@ -7,7 +7,7 @@ using UnityEngine;
 
 public class ActivationEventGroup : IEventGroup, IActivationGroup
 {
-    public int EventGroupId { get; set; }
+    public string EventGroupId { get; set; }
     
     private List<GameObject> _gameObjectsInEventGroup = new List<GameObject>();
 

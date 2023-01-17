@@ -5,7 +5,7 @@ using UnityEngine;
 
 public interface IEventGroup
 {
-    public int EventGroupId { get; set; }
+    public string EventGroupId { get; set; }
     public void TriggerEventGroup(EventGroupTrigger eventGroupTrigger, BoardManager boardManager);
     public void AddObjectToEventGroup(GameObject gameObjectToAdd);
 

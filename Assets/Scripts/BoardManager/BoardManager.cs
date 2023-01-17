@@ -15,16 +15,18 @@ public class BoardManager : MonoBehaviour
     [SerializeField] private Transform cameraTransform;
     
     private LevelGrid _levelGrid;
-    private List<GameObject> _playerControlledObjects;
+    private List<List<GameObject>> _inputControlledObjects;
+    private List<List<InputAction>> _inputHistory;
 
-    private List<IVictoryCondition> _victoryConditions = new List<IVictoryCondition>();
+    private List<IVictoryCondition> _victoryConditions;
 
     private List<GameObject> _objectsToAnimateMove;
-    private Dictionary<GameObject, float> _objectsToAnimateMoveTimer = new Dictionary<GameObject, float>();
+    private Dictionary<GameObject, float> _objectsToAnimateMoveTimer;
 
-    private Dictionary<int, IEventGroup> _eventGroups = new Dictionary<int, IEventGroup>();
-    private List<RequestedEvent> _requestedEvents = new List<RequestedEvent>();
+    private Dictionary<string, IEventGroup> _eventGroups;
+    private List<RequestedEvent> _requestedEvents;
     public int CurrentTurn { get; private set; }
+    public int CurrentIteration { get; private set; } // How many times the level 'reset' clone wise
     
     #endregion
 
@@ -35,7 +37,7 @@ public class BoardManager : MonoBehaviour
         return _levelGrid;
     }
 
-    public Dictionary<int, IEventGroup> GetEventGroups()
+    public Dictionary<string, IEventGroup> GetEventGroups()
     {
         return _eventGroups;
     }
@@ -45,19 +47,53 @@ public class BoardManager : MonoBehaviour
         _objectsToAnimateMove.Add(gameObjectToAnimate);
     }
 
+    public void StartNewLevelIteration()
+    {
+        _levelGrid.forEachCell(
+            (x, y, cell) =>
+            {
+                foreach (var cellItem in cell)
+                {
+                    Destroy(cellItem);
+                }
+                return null;
+            }
+        );
+        CurrentIteration += 1;
+        SetupLevelIteration();
+    }
+
     #endregion
 
     #region Startup functions
     void Start()
     {
+        CurrentIteration = 0;
+        _inputHistory = new List<List<InputAction>>();
+        SetupLevelIteration();
+        LoadGUI();
+    }
+
+    private void SetupLevelIteration()
+    {
+        CancelInvoke(nameof(HandleTurn)); // In case it is already running.
+        
         CurrentTurn = 0;
-        _playerControlledObjects = new List<GameObject>();
+        _inputControlledObjects = new List<List<GameObject>>();
+        _inputControlledObjects.Add(new List<GameObject>());
+        _inputControlledObjects.Add(new List<GameObject>());
+        _inputControlledObjects.Add(new List<GameObject>());
+        _inputControlledObjects.Add(new List<GameObject>());
+        _inputControlledObjects.Add(new List<GameObject>());
+        _inputHistory.Add(new List<InputAction>());
         _objectsToAnimateMove = new List<GameObject>();
         _objectsToAnimateMoveTimer = new Dictionary<GameObject, float>();
-        
-        LoadLevel();
+        _victoryConditions = new List<IVictoryCondition>();
+        _eventGroups = new Dictionary<string, IEventGroup>();
+        _requestedEvents = new List<RequestedEvent>();
+
+        LoadLevelGrid();
         SetupEventState();
-        LoadGUI();
         InvokeRepeating(nameof(HandleTurn), Globals.TIME_BEFORE_STARTING_TURNS, 1/Globals.TURNS_PER_SECOND);
         // CancelInvoke to stop
     }
@@ -82,7 +118,7 @@ public class BoardManager : MonoBehaviour
         _winOverlay.SetActive(false);
     }
 
-    private void LoadLevel()
+    private void LoadLevelGrid()
     {
         string[][] rawCsvGridData = CsvUtils.CsvToArray(CsvUtils.GetLevelFilePath(levelName));
         int gridSizeX = rawCsvGridData.Length;
@@ -130,18 +166,23 @@ public class BoardManager : MonoBehaviour
             String itemStringName = objectLevelLoadProperties.ObjectName;
 
             GameObject newGameObject = null;
-            if (itemStringName == "player1") { newGameObject = CreateAndSetupGameObject(x, y, "GridBoundPrefabs/pf_player1"); _playerControlledObjects.Add(newGameObject); } 
+            if (itemStringName == "player" && false) { newGameObject = CreateAndSetupGameObject(x, y, "GridBoundPrefabs/pf_player"); _inputControlledObjects[CurrentIteration].Add(newGameObject); // JANK MAYBE REMOVE?
+                CC.GetItemFromInterfaceCache<IHasCloneId>(newGameObject).CloneId = 0;
+            } 
             else if (itemStringName == "wall") { newGameObject = CreateAndSetupGameObject(x, y, "GridBoundPrefabs/pf_wall"); } 
             else if (itemStringName == "boulder") { newGameObject = CreateAndSetupGameObject(x, y, "GridBoundPrefabs/pf_boulder"); } 
             else if (itemStringName == "goal") { newGameObject = CreateAndSetupGameObject(x, y, "GridBoundPrefabs/pf_goal"); _victoryConditions.Add(CC.GetItemFromInterfaceCache<IVictoryCondition>(newGameObject));}
             else if (itemStringName == "basicButton") { newGameObject = CreateAndSetupGameObject(x, y, "GridBoundPrefabs/pf_basicButton"); }
             else if (itemStringName == "basicGate") { newGameObject = CreateAndSetupGameObject(x, y, "GridBoundPrefabs/pf_basicGate"); }
-            else if (itemStringName == "reverseGate") { newGameObject = CreateAndSetupGameObject(x, y, "GridBoundPrefabs/pf_reverseGate"); }
+            else if (itemStringName == "reverseGate") { newGameObject = CreateAndSetupGameObject(x, y, "GridBoundPrefabs/pf_reverseGate"); } // CONSIDER ONLY ADDING SPECIAL CASE STUFF HERE? AND USE NAME TO LOAD STUFF AUTOMAGICALLY?
+            else if (itemStringName == "cloneSpawn") { newGameObject = CreateAndSetupGameObject(x, y, "GridBoundPrefabs/pf_cloneSpawn"); SpawnClone(newGameObject, objectLevelLoadProperties, gameObjectsInCell);}
+            else if (itemStringName == "cloneEnd") { newGameObject = CreateAndSetupGameObject(x, y, "GridBoundPrefabs/pf_cloneEnd"); CC.GetItemFromInterfaceCache<IHasCloneId>(newGameObject).CloneId = objectLevelLoadProperties.CloneId;
+                AddObjectToCloneEventGroup(newGameObject);
+            }
 
             if (newGameObject != null)
             {
                 gameObjectsInCell.Add(newGameObject);
-
                 AddObjectToEventGroup(newGameObject, objectLevelLoadProperties.EventGroupIds);
                 ModifySpriteColor(newGameObject, objectLevelLoadProperties.Color);
             }
@@ -150,6 +191,26 @@ public class BoardManager : MonoBehaviour
         return gameObjectsInCell;
     }
 
+    private void SpawnClone(GameObject newGameObject, LevelLoadProperties levelLoadProperties, List<GameObject> gameObjectsInCell)
+    {
+        CC.GetItemFromInterfaceCache<IHasCloneId>(newGameObject).CloneId = levelLoadProperties.CloneId;
+
+        if (levelLoadProperties.CloneId <= CurrentIteration && levelLoadProperties.CloneId > -1 && CC.GetItemFromInterfaceCache<ICloneSpawner>(newGameObject) != null)
+        {
+            IGridProperties spawnerGridProperties = CC.GetGP(newGameObject);
+            GameObject playerGameObject = CreateAndSetupGameObject(spawnerGridProperties.BoardX, spawnerGridProperties.BoardY ,"GridBoundPrefabs/pf_player");
+            CC.GetItemFromInterfaceCache<IHasCloneId>(playerGameObject).CloneId = levelLoadProperties.CloneId;
+            
+            gameObjectsInCell.Add(playerGameObject);
+            AddObjectToEventGroup(playerGameObject, levelLoadProperties.EventGroupIds);
+            ModifySpriteColor(playerGameObject, levelLoadProperties.Color);
+
+            if (CurrentIteration >= levelLoadProperties.CloneId)
+            {
+                _inputControlledObjects[levelLoadProperties.CloneId].Add(playerGameObject);
+            }
+        }
+    }
     private void ModifySpriteColor(GameObject newGameObject, Color color)
     {
         if (color != Color.clear) {
@@ -158,17 +219,22 @@ public class BoardManager : MonoBehaviour
         }
     }
 
-    private void AddObjectToEventGroup(GameObject gameObject, List<int> eventGroupIds)
+    private void AddObjectToEventGroup(GameObject gameObject, List<string> eventGroupIds)
     {
         foreach (var eventGroupId in eventGroupIds)
         {
             if (!_eventGroups.ContainsKey(eventGroupId))
             {
                 var isFlagOrPlayer = CC.GetItemFromInterfaceCache<IFlag>(gameObject) != null || CC.GetItemFromInterfaceCache<IPlayer>(gameObject) != null;
+                var isCloneEnder = CC.GetItemFromInterfaceCache<ICloneEnder>(gameObject) != null || CC.GetItemFromInterfaceCache<IPlayer>(gameObject) != null;
                 IEventGroup newGroup;  // JANK this will be dynamic based on a different csv cell, not some case statement
                 if (isFlagOrPlayer)
                 {
                     newGroup = new FlagVictoryEventGroup();
+                }
+                else if(isCloneEnder)
+                {
+                    newGroup = new ActivationEventGroup(); // Redundant but I dont care 
                 }
                 else
                 {
@@ -183,16 +249,27 @@ public class BoardManager : MonoBehaviour
         }
     }
     
+    private void AddObjectToCloneEventGroup(GameObject newGameObject)
+    {
+        var cloneId = CC.GetItemFromInterfaceCache<IHasCloneId>(newGameObject);
+        string cloneEventGroupId = "clone_" + cloneId;
+        AddObjectToEventGroup(newGameObject, new List<string> { cloneEventGroupId });
+    }
+    
     #endregion
 
     #region Turn Handling functions
 
     private void HandleTurn()
     {
+        var startIteration = CurrentIteration;
         HandleActions();
         HandleEvents();
         HandleVictory();
-        CurrentTurn++;
+        if (startIteration == CurrentIteration)
+        {
+            CurrentTurn++;
+        }
     }
 
     private void HandleVictory()
@@ -294,7 +371,7 @@ public class BoardManager : MonoBehaviour
     #endregion
 
     #region ActionFramework
-        private List<InputAction> GetCurrentActionInputs()
+    private List<InputAction> GetCurrentActionInputs()
     {
         List<InputAction> actions = new List<InputAction>();
         List<InputAction> noActions = new List<InputAction>();
@@ -322,25 +399,54 @@ public class BoardManager : MonoBehaviour
     
     private List<RequestedAction> GetRequestedActions()
     {
-        List<RequestedAction> requestedActions = new List<RequestedAction>();
-        
-        List<InputAction> currentInputtedActions = GetCurrentActionInputs(); // Currently only returns 1 action;
-        InputAction inputtedInputAction = currentInputtedActions[0];
 
-        if (inputtedInputAction != InputAction.None)
+        List<RequestedAction> requestedActions = new List<RequestedAction>();
+        _inputHistory[CurrentIteration].Add(GetCurrentActionInputs()[0]);
+
+        if (CurrentIteration > 0)
         {
-            foreach (var playerControlledObject in _playerControlledObjects)
+            Debug.Log("HERE");
+        }
+        for (var playBackIteration = CurrentIteration; playBackIteration > -1; playBackIteration--)
+        {
+            requestedActions.AddRange(GetRequestedActionsForIteration(playBackIteration));
+        }
+
+        return requestedActions;
+    }
+
+    private List<RequestedAction> GetRequestedActionsForIteration(int iterationNumber)
+    {
+        List<RequestedAction> requestedActions = new List<RequestedAction>();
+
+        var inputHistory = _inputHistory[iterationNumber];
+        var inputControlledObjects = _inputControlledObjects[iterationNumber];
+
+        InputAction currentAction = InputAction.None;
+
+        if (CurrentIteration > 0)
+        {
+            Debug.Log("CMON");
+        }
+
+        if(inputHistory.Count > CurrentTurn)
+        { 
+            currentAction = _inputHistory[iterationNumber][CurrentTurn];
+        }
+            
+        if (currentAction != InputAction.None)
+        {
+            foreach (var controlledObject in inputControlledObjects)
             {
-                if (CanObjectAct(playerControlledObject))
+                if (CanObjectAct(controlledObject))
                 {
-                    requestedActions.Add(new RequestedAction(playerControlledObject, inputtedInputAction));
+                    requestedActions.Add(new RequestedAction(controlledObject, currentAction));
                 }
             }
         }
 
         return requestedActions;
     }
-    
     private void HandleActions()
     {
         List<RequestedAction> requestedActions = GetRequestedActions();
@@ -375,7 +481,7 @@ public class BoardManager : MonoBehaviour
     #endregion
 
     #region ActionAttempters
-        private bool AttemptMoveAction(RequestedAction currentRequestedAction)
+    private bool AttemptMoveAction(RequestedAction currentRequestedAction)
     {
         int xChange = GetXChange(currentRequestedAction.RequestedInputAction);
         int yChange = GetYChange(currentRequestedAction.RequestedInputAction);
@@ -545,7 +651,7 @@ public class BoardManager : MonoBehaviour
                 
                 objectToAnimate.transform.position = Vector2.MoveTowards(objectToAnimate.transform.position,
                     targetLocation, Time.deltaTime//_objectsToAnimateMoveTimer[objectToAnimate]  // JANK
-                    );
+                );
             }
             else
             {

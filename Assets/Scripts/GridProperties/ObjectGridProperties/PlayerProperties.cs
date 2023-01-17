@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerProperties : MonoBehaviour, IGridProperties, IPlayer
+public class PlayerProperties : MonoBehaviour, IGridProperties, IPlayer, IHasCloneId
 {
     public int BoardX { get; set; } = 0;
     public int BoardY { get; set; } = 0;
@@ -11,7 +11,9 @@ public class PlayerProperties : MonoBehaviour, IGridProperties, IPlayer
     public int ActionEnd { get; set; } = 0;
 
     public VisualAction CurrentVisualAction { get; set; } = VisualAction.None;
-    public List<int> EventGroupIds { get; set; } = new List<int>();
+    public List<string> EventGroupIds { get; set; } = new List<string>();
+    
+    public int CloneId { get; set; } = -1;
 
     public bool DoesOccupyTile()
     {
