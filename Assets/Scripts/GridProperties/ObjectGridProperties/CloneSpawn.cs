@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-class CloneSpawn: MonoBehaviour, IGridProperties, IHasCloneId, ICloneSpawner
+class CloneSpawn: MonoBehaviour, IGridProperties, IHasCloneId, ICloneSpawner, IPlayer // Clone spawner is really just a player.
 {
 public int BoardX { get; set; } = 0;
 public int BoardY { get; set; } = 0;

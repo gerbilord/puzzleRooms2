@@ -242,10 +242,10 @@ public class BoardManager : MonoBehaviour
         {
             if (!_eventGroups.ContainsKey(eventGroupId))
             {
-                var isFlagOrPlayer = CC.GetItemFromInterfaceCache<IFlag>(gameObject) != null || CC.GetItemFromInterfaceCache<IPlayer>(gameObject) != null;
+                var isFlagOrPlayerOrBoulder = CC.GetItemFromInterfaceCache<IFlag>(gameObject) != null || CC.GetItemFromInterfaceCache<IPlayer>(gameObject) != null  || CC.GetItemFromInterfaceCache<IBoulder>(gameObject) != null;
                 var isCloneEnder = CC.GetItemFromInterfaceCache<ICloneEnder>(gameObject) != null || CC.GetItemFromInterfaceCache<IPlayer>(gameObject) != null;
                 IEventGroup newGroup;  // JANK this will be dynamic based on a different csv cell, not some case statement
-                if (isFlagOrPlayer)
+                if (isFlagOrPlayerOrBoulder)
                 {
                     newGroup = new VictoryEventGroup();
                     _victoryConditions.Add((IVictoryCondition)newGroup);
@@ -269,7 +269,7 @@ public class BoardManager : MonoBehaviour
     
     private void AddObjectToCloneEventGroup(GameObject newGameObject)
     {
-        var cloneId = CC.GetItemFromInterfaceCache<IHasCloneId>(newGameObject);
+        int cloneId = CC.GetItemFromInterfaceCache<IHasCloneId>(newGameObject).CloneId;
         string cloneEventGroupId = "clone_" + cloneId;
         AddObjectToEventGroup(newGameObject, new List<string> { cloneEventGroupId });
     }
@@ -295,6 +295,11 @@ public class BoardManager : MonoBehaviour
         if (_victoryConditions.Count > 0 && !_didWin)
         {
             _didWin = _victoryConditions.TrueForAll(condition => condition.IsVictoryConditionMet(this));
+
+            if (_didWin)
+            {
+                Debug.Log("HI");
+            }
         }
     }
 

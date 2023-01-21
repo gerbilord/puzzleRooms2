@@ -14,15 +14,8 @@ public class BasicButtonProperties : MonoBehaviour, IGridProperties, IActivator
     public VisualAction CurrentVisualAction { get; set; } = VisualAction.None;
     public List<string> EventGroupIds { get; set; } = new List<string>();
 
-    public bool IsPressed { get; set; }
-
-    public bool IsActivated()
-    {
-        return IsPressed;
-    }
-
     public bool CalculateIfActive(BoardManager boardManager)
     {
-        return boardManager.GetLevelGrid().GetTile(BoardX, BoardY).Any(item=>ComponentCache.GetGP(item).DoesOccupyTile());
+        return boardManager.GetLevelGrid().IsTileOccupied(BoardX, BoardY);
     }
 }

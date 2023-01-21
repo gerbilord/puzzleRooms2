@@ -1,0 +1,11 @@
+﻿wall,wall,wall,wall,wall,wall,wall
+wall,cloneSpawn:cloneId=1,,,,goal,wall
+wall,,,,,goal,wall
+wall,player,,,,,wall
+wall,wall,wall,,wall,wall,wall
+wall,,,,,,wall
+wall,,,,,,wall
+wall,,,,,cloneEnd:cloneId=0,wall
+wall,wall,wall,wall,wall,wall,wall
+,,,,,,
+,,,,,,

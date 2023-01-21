@@ -1,11 +1,7 @@
-﻿,wall,wall,wall,wall,wall,
-,wall,,"player, boulderGoal",,wall,
-,wall,boulder,boulderGoal,boulder,wall,
-,wall,,"boulder, boulderGoal",,wall,
-,wall,,"boulder, boulderGoal",,wall,
-,wall,,"boulder, boulderGoal",,wall,wall
-wall,wall,,"boulder, boulderGoal",,,wall
-wall,,,"boulder, boulderGoal",,,wall
-wall,,,,,wall,wall
-,wall,,,wall,wall,
-,wall,wall,wall,wall,,
+﻿wall,wall,wall,wall,wall,wall,wall,,,
+wall,boulderGoal:eg=1,,,,goal,wall,,,
+wall,,,,,,wall,,,
+wall,boulder:eg=1,,,,,wall,,,
+wall,,,boulder:color=blue,,,wall,,,
+wall,player,,,,cloneSpawn,wall,,,
+wall,wall,wall,wall,wall,wall,wall,,,
