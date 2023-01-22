@@ -120,7 +120,7 @@ public class BoardManager : MonoBehaviour
 
     private void LoadLevelGrid()
     {
-        string[][] rawCsvGridData = CsvUtils.CsvToArray(CsvUtils.GetLevelFilePath(levelName));
+        string[][] rawCsvGridData = CsvUtils.StringToArray(LevelLiterals.myLevel2); // CsvUtils.CsvToArray(CsvUtils.GetLevelFilePath(levelName)); // JANK
         int gridSizeX = rawCsvGridData.Length;
         int gridSizeY = rawCsvGridData[0].Length;
 
