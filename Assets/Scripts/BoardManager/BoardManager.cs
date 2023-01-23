@@ -9,10 +9,11 @@ using CC = ComponentCache;
 public class BoardManager : MonoBehaviour
 {
     #region Properties
-    public String levelName;
+    public string levelName; // This is used if no levelLiteral is given.
+    public string levelLiteral; // use this to pass in a level in string form.
     private bool _didWin = false;
     private GameObject _winOverlay;
-    [SerializeField] private Transform cameraTransform;
+    public Transform cameraTransform;
     
     private LevelGrid _levelGrid;
     private List<List<GameObject>> _inputControlledObjects;
@@ -49,16 +50,7 @@ public class BoardManager : MonoBehaviour
 
     public void StartNewLevelIteration()
     {
-        _levelGrid.forEachCell(
-            (x, y, cell) =>
-            {
-                foreach (var cellItem in cell)
-                {
-                    Destroy(cellItem);
-                }
-                return null;
-            }
-        );
+        DestroyGameObjectsOnGrid();
         CurrentIteration += 1;
         SetupLevelIteration();
     }
@@ -120,7 +112,11 @@ public class BoardManager : MonoBehaviour
 
     private void LoadLevelGrid()
     {
-        string[][] rawCsvGridData = CsvUtils.StringToArray(LevelLiterals.myLevel2); // CsvUtils.CsvToArray(CsvUtils.GetLevelFilePath(levelName)); // JANK
+        string[][] rawCsvGridData = levelLiteral != null 
+            ? CsvUtils.StringToArray(levelLiteral) 
+            : CsvUtils.CsvToArray(CsvUtils.GetLevelFilePath(levelName));
+        
+
         int gridSizeX = rawCsvGridData.Length;
         int gridSizeY = rawCsvGridData[0].Length;
 
@@ -295,11 +291,6 @@ public class BoardManager : MonoBehaviour
         if (_victoryConditions.Count > 0 && !_didWin)
         {
             _didWin = _victoryConditions.TrueForAll(condition => condition.IsVictoryConditionMet(this));
-
-            if (_didWin)
-            {
-                Debug.Log("HI");
-            }
         }
     }
 
@@ -685,8 +676,38 @@ public class BoardManager : MonoBehaviour
             largeFont.normal.textColor = Color.white;
             GUI.Label(new Rect(Screen.width/2f-250, Screen.height/2f-150, 500, 500), "VICTORY", largeFont);
         }
-        GUI.Label(new Rect(20,20,100,100), CsvUtils.GetLevelFilePath(levelName));
+
+        if (levelLiteral == null) // Show what file we are loading if it is not a default file.
+        {
+            GUI.Label(new Rect(20,20,1000,100), CsvUtils.GetLevelFilePath(levelName));
+        }
+        
         GUI.Label(new Rect(10,10,100,100), CurrentTurn.ToString());
+    }
+
+    #endregion
+
+    #region Clean up functions
+
+    public void OnDestroy()
+    {
+        Destroy(_winOverlay);
+        DestroyGameObjectsOnGrid(); // CONSIDER CLEANING COMPONENT CACHE
+    }
+    
+    private void DestroyGameObjectsOnGrid()
+    {
+        _levelGrid.forEachCell(
+            (x, y, cell) =>
+            {
+                foreach (var cellItem in cell)
+                {
+                    Destroy(cellItem);
+                }
+
+                return null;
+            }
+        );
     }
 
     #endregion
