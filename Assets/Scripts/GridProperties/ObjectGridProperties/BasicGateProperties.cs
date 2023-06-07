@@ -69,7 +69,8 @@ public class BasicGateProperties : MonoBehaviour, IGridProperties, ISpriteChange
 
     private void AttemptToOpenGate(BoardManager boardManager)
     {
-        if (!ShouldClose())
+        // If something is occupying it, force it open. For undo.
+        if (!ShouldClose() || boardManager.GetLevelGrid().IsTileOccupiedExceptBy(BoardX, BoardY, this.gameObject))
         {
             IsClosed = false;
             boardManager.AddObjectToAnimate(gameObject);

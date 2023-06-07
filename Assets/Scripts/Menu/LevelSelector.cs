@@ -10,7 +10,7 @@ using CC = ComponentCache;
 public class LevelSelector : MonoBehaviour
 {
     public string defaultLevelName;
-    private string defaultLevelLiteral = LevelLiterals.pokemonLevel; // ADD FOR ONLINE BUILDS 
+    private string defaultLevelLiteral; // = LevelLiterals.pokemonLevel; // ADD FOR ONLINE BUILDS 
     [SerializeField] private Transform cameraTransform;
     private BoardManager _currentLevel; 
     void Start()

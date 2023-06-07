@@ -18,11 +18,13 @@ public class BoardManager : MonoBehaviour
     private LevelGrid _levelGrid;
     private List<List<GameObject>> _inputControlledObjects;
     private List<List<InputAction>> _inputHistory;
+    private List<List<SuccessfulBoardAction>> _commandHistory;
 
     private List<IVictoryCondition> _victoryConditions;
 
     private List<GameObject> _objectsToAnimateMove;
     private Dictionary<GameObject, float> _objectsToAnimateMoveTimer;
+    private float _turnCooldownTimer = Globals.TURN_COOLDOWN_TIME;
 
     private Dictionary<string, IEventGroup> _eventGroups;
     private List<RequestedEvent> _requestedEvents;
@@ -60,17 +62,18 @@ public class BoardManager : MonoBehaviour
     #region Startup functions
     void Start()
     {
-        CurrentIteration = 0;
+        CurrentIteration = 0; // Iteration means how many clones of the level have been made.
         _inputHistory = new List<List<InputAction>>();
+        _commandHistory = new List<List<SuccessfulBoardAction>>();
         SetupLevelIteration();
         LoadGUI();
     }
 
     private void SetupLevelIteration()
     {
-        CancelInvoke(nameof(HandleTurn)); // In case it is already running.
+        // CancelInvoke(nameof(HandleTurn)); // In case it is already running.
         
-        CurrentTurn = 0;
+        CurrentTurn = 0; // Current turn means how many moves/actions have been taken this iteration.
         _inputControlledObjects = new List<List<GameObject>>();
         _inputControlledObjects.Add(new List<GameObject>());
         _inputControlledObjects.Add(new List<GameObject>());
@@ -78,6 +81,7 @@ public class BoardManager : MonoBehaviour
         _inputControlledObjects.Add(new List<GameObject>());
         _inputControlledObjects.Add(new List<GameObject>());
         _inputHistory.Add(new List<InputAction>());
+        _commandHistory.Add(new List<SuccessfulBoardAction>());
         _objectsToAnimateMove = new List<GameObject>();
         _objectsToAnimateMoveTimer = new Dictionary<GameObject, float>();
         _victoryConditions = new List<IVictoryCondition>();
@@ -86,7 +90,7 @@ public class BoardManager : MonoBehaviour
 
         LoadLevelGrid();
         SetupEventState();
-        InvokeRepeating(nameof(HandleTurn), Globals.TIME_BEFORE_STARTING_TURNS, 1/Globals.TURNS_PER_SECOND);
+        // InvokeRepeating(nameof(HandleTurn), Globals.TIME_BEFORE_STARTING_TURNS, 1/Globals.TURNS_PER_SECOND);
         // CancelInvoke to stop
     }
 
@@ -407,6 +411,11 @@ public class BoardManager : MonoBehaviour
         {
             actions.Add(InputAction.Right);
         }
+        if (Input.GetKey("q"))
+        {
+            actions.Add(InputAction.Undo);
+        }
+        
 
         return actions.Count == 1 ? actions : noActions;
     }
@@ -467,8 +476,23 @@ public class BoardManager : MonoBehaviour
         {
             RequestedAction currentRequestedAction = requestedActions[0];
             requestedActions.RemoveAt(0);
-            
-            bool didActionSucceed = AttemptMoveAction(currentRequestedAction) || AttemptPushAction(currentRequestedAction);
+
+            bool didActionSucceed = false;
+            if (AttemptUndoAction(currentRequestedAction))
+            {
+                didActionSucceed = true;
+            }
+            else if (AttemptMoveAction(currentRequestedAction))
+            {
+                didActionSucceed = true;
+                _commandHistory[CurrentIteration].Add(new SuccessfulBoardAction(currentRequestedAction, BoardAction.Move));
+                
+            }
+            else if(AttemptPushAction(currentRequestedAction))
+            {
+                didActionSucceed = true;
+                _commandHistory[CurrentIteration].Add(new SuccessfulBoardAction(currentRequestedAction, BoardAction.Push));
+            }
 
             if (didActionSucceed)
             {
@@ -486,6 +510,47 @@ public class BoardManager : MonoBehaviour
     #endregion
 
     #region ActionAttempters
+    
+    // NEED TO ACCOUNT FOR CLONES
+    private bool AttemptUndoAction(RequestedAction currentRequestedAction)
+    {
+        int undoTurn = CurrentTurn;
+        int turnToUndo = CurrentTurn - 1;
+
+        if (currentRequestedAction.RequestedInputAction != InputAction.Undo)
+        {
+            return false;
+        }
+
+        if (CurrentTurn == 0)
+        {
+            _inputHistory[CurrentIteration].RemoveAt(undoTurn); // Remove the previous undo input.
+            CurrentTurn = CurrentTurn - 1; // Put turn at -1 so it will be back to 0 after next turn.
+            return false;
+        }
+        
+        CurrentTurn -= 2; // Turn we will end up at
+        
+        // if the last successful action was a push, we need to undo the push
+        if (_commandHistory[CurrentIteration][turnToUndo].BoardAction == BoardAction.Move)
+        {
+            UndoMoveAction(_commandHistory[CurrentIteration][turnToUndo]);
+            // NEED TO ACCOUNT FOR CLONES
+        }
+        else if(_commandHistory[CurrentIteration][turnToUndo].BoardAction == BoardAction.Push)
+        {
+            UndoPushAction(_commandHistory[CurrentIteration][turnToUndo]);
+            // NEED TO ACCOUNT FOR CLONES
+        }
+        
+        _inputHistory[CurrentIteration].RemoveAt(undoTurn); // Remove the previous undo input.
+        _inputHistory[CurrentIteration].RemoveAt(turnToUndo); // Remove the previous move input.
+        
+        _commandHistory[CurrentIteration].RemoveAt(turnToUndo); // Remove the previous command.
+        
+        return true;
+    }
+
     private bool AttemptMoveAction(RequestedAction currentRequestedAction)
     {
         int xChange = GetXChange(currentRequestedAction.RequestedInputAction);
@@ -522,6 +587,27 @@ public class BoardManager : MonoBehaviour
         AddTriggerEventsForTile(newX, newY, EventGroupTrigger.onMove);
         
         return true;
+    }
+
+    private void UndoMoveAction(SuccessfulBoardAction successfulBoardAction)
+    {
+        int xChange = -1 * GetXChange(successfulBoardAction.RequestedAction.RequestedInputAction);
+        int yChange = -1 * GetYChange(successfulBoardAction.RequestedAction.RequestedInputAction);
+        
+        IGridProperties itemToMove = CC.GetGP(successfulBoardAction.RequestedAction.requestingObject);
+        
+        // Assume in bounds because this action was successful.
+        int oldX = itemToMove.BoardX;
+        int oldY = itemToMove.BoardY;
+        int newX = oldX + xChange;
+        int newY = oldY + yChange;
+        
+        _levelGrid.rawMoveObject(oldX, oldY, newX, newY, successfulBoardAction.RequestedAction.requestingObject);
+        
+        AddCooldownWithVisuals(successfulBoardAction.RequestedAction.requestingObject, Globals.TURNS_FOR_BASIC_ACTION, VisualAction.Walking);
+
+        AddTriggerEventsForTile(oldX, oldY, EventGroupTrigger.onMove);
+        AddTriggerEventsForTile(newX, newY, EventGroupTrigger.onMove); 
     }
     
     private bool AttemptPushAction(RequestedAction currentRequestedAction)
@@ -586,6 +672,46 @@ public class BoardManager : MonoBehaviour
         return true;
     }
 
+    private void UndoPushAction(SuccessfulBoardAction successfulBoardAction)
+    {
+        InputAction inputAction = successfulBoardAction.RequestedAction.RequestedInputAction;
+        GameObject requestingObject = successfulBoardAction.RequestedAction.requestingObject;
+
+        int xChange = -1 * GetXChange(inputAction);
+        int yChange = -1 * GetYChange(inputAction);
+
+
+        IGridProperties itemToMove = CC.GetGP(requestingObject);
+
+        int oldX = itemToMove.BoardX;
+        int oldY = itemToMove.BoardY;
+        int newX = oldX + xChange;
+        int newY = oldY + yChange;
+        int pushedOldX = oldX - xChange;
+        int pushedOldY = oldY - yChange;
+        int pushedNewX = oldX;
+        int pushedNewY = oldY;
+        
+        
+        List<GameObject> itemsToPush = _levelGrid.GetTile(pushedOldX, pushedOldY).FindAll(tileObject => CC.GetGP(tileObject).CanBePushed());
+        
+        // We made it!
+        // Move pusher.
+        _levelGrid.rawMoveObject(oldX, oldY, newX, newY, requestingObject);
+        AddCooldownWithVisuals(requestingObject, Globals.TURNS_FOR_HEAVY_PUSH, VisualAction.Pushing);
+
+        // Move all the items to push.
+        foreach (var itemToPush in itemsToPush)
+        {
+            _levelGrid.rawMoveObject(pushedNewX, pushedNewY, itemToPush);
+            CopyCooldownWithDifferentVisuals(itemToPush, requestingObject, VisualAction.BeingPushed);
+        }
+        
+        AddTriggerEventsForTile(oldX, oldY, EventGroupTrigger.onMove); 
+        AddTriggerEventsForTile(newX, newY, EventGroupTrigger.onMove);
+        AddTriggerEventsForTile(pushedOldX, pushedOldY, EventGroupTrigger.onMove);
+    }
+
     #endregion
     
     #endregion
@@ -615,6 +741,20 @@ public class BoardManager : MonoBehaviour
     }
     private void Update()
     {
+        if (GetCurrentActionInputs()[0] != InputAction.None && _turnCooldownTimer <= 0f)
+        {
+            _objectsToAnimateMove.Clear();
+            _objectsToAnimateMoveTimer.Clear();
+            _turnCooldownTimer = Globals.TURN_COOLDOWN_TIME;
+            HandleTurn();
+        }
+        else
+        {
+            _turnCooldownTimer -= Time.deltaTime;
+        }
+        
+        
+        
         // To debug;
         // InstantMovement();
         // return;
@@ -634,7 +774,7 @@ public class BoardManager : MonoBehaviour
             int totalTurnsForAction = actionEnd - actionStart;
             int turnsLeft = actionEnd - CurrentTurn;
             int turnsAlreadyPassed = CurrentTurn - actionStart;
-            float totalTimeToReachTarget = totalTurnsForAction * Globals.SECONDS_WITHIN_TURN;
+            float totalTimeToReachTarget = Globals.TURN_COOLDOWN_TIME; // totalTurnsForAction * Globals.SECONDS_WITHIN_TURN;
             
             // Always update to correct sprite
             ISpriteChanger spriteChanger = CC.GetItemFromInterfaceCache<ISpriteChanger>(objectToAnimate);
@@ -645,8 +785,8 @@ public class BoardManager : MonoBehaviour
             }
 
             // If turn isn't over.
-            if (CC.GetGP(objectToAnimate).ActionEnd > CurrentTurn)
-            {
+            // if (CC.GetGP(objectToAnimate).ActionEnd > CurrentTurn)
+            // {
                 if (!_objectsToAnimateMoveTimer.ContainsKey(objectToAnimate))
                 {
                     _objectsToAnimateMoveTimer.Add(objectToAnimate, 0f);
@@ -655,15 +795,15 @@ public class BoardManager : MonoBehaviour
                 _objectsToAnimateMoveTimer[objectToAnimate] += Time.deltaTime / totalTimeToReachTarget * Globals.MAGIC_ANIMATION_NUMBER;
                 
                 objectToAnimate.transform.position = Vector2.MoveTowards(objectToAnimate.transform.position,
-                    targetLocation, Time.deltaTime//_objectsToAnimateMoveTimer[objectToAnimate]  // JANK
+                    targetLocation, _objectsToAnimateMoveTimer[objectToAnimate]  // JANK
                 );
-            }
-            else
-            {
+            // }
+            // else
+            /* {
                 objectToAnimate.transform.position = targetLocation;
                 _objectsToAnimateMove.RemoveAt(i);
                 _objectsToAnimateMoveTimer.Remove(objectToAnimate);
-            }
+            }*/
         }
     }
 
@@ -675,6 +815,11 @@ public class BoardManager : MonoBehaviour
             largeFont.fontSize = 100;
             largeFont.normal.textColor = Color.white;
             GUI.Label(new Rect(Screen.width/2f-250, Screen.height/2f-150, 500, 500), "VICTORY", largeFont);
+        }
+
+        if (_turnCooldownTimer <= 0)
+        {
+            // GUI.Label(new Rect(10,30,100,100), "READY");
         }
 
         if (levelLiteral == null) // Show what file we are loading if it is not a default file.

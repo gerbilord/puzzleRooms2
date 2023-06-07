@@ -5,4 +5,5 @@ public enum InputAction
     Down,
     Left,
     Right,
+    Undo,
 }

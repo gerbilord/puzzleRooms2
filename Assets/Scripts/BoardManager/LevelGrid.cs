@@ -71,6 +71,19 @@ public class LevelGrid : ScriptableObject
 
         return false;
     }
+    
+    public bool IsTileOccupiedExceptBy(int x, int y, GameObject gameObjectToIgnore)
+    {
+        foreach (var gameObject in _levelGrid[x][y])
+        {
+            if (CC.GetGP(gameObject).DoesOccupyTile() && gameObject != gameObjectToIgnore)
+            {
+                return true;
+            }
+        }
+
+        return false;
+    }
 
     public bool InBounds(int x, int y)
     {
